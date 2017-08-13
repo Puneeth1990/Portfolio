@@ -1,0 +1,1733 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Puneeth Srikanta, UI/UX Designer</title><link rel="icon" type="image/jpg" href="img/jk.jpg" />
+
+    <!--Fonts-->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Amiri:400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Megrim' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Marck+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:600' rel='stylesheet' type='text/css'>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.transitions.min.css">
+    <link rel="stylesheet" href="css/owl.theme.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/lightbox.css">
+
+    <link rel="shortcut icon" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
+    
+    <script src="app/bootstrap.js"></script>
+	<script src="app/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
+	
+    
+    <script>
+ // workareas
+    $("#workarea-carousel").owlCarousel({
+        items: 5,
+        itemsDesktop: [1000, 2],
+        itemsDesktopSmall: [900, 2],
+        itemsTablet: [600, 1],
+        itemsMobile: [0, 1],
+        pagination: false,
+        autoPlay: 4000
+    });
+    </script>
+    
+    <script>
+    var app = angular.module('myApp', ['ngMessages'])
+    .controller('AppCtrl', function($scope){
+    	
+        $scope.validateSuccessSubmit = function(){
+          if($scope.contactForm.nameField.$valid && 
+            $scope.contactForm.emailField.$valid &&
+              $scope.contactForm.$submitted) {
+                $scope.formCompleted = true;
+              }
+          
+        };
+      });
+    </script>
+    
+    <style>
+    
+    	.header-fullscreen
+    	{
+    		background-size: cover;
+    		background-image: url("../images/Image1.jpg");
+    		position: relative;
+    		height:500px;
+    		color: white;
+		} 
+		
+		.fadeInLeft1
+		{
+			background-image: url("../images/Image1.jpg");
+			height:360px;
+			width: 460px;
+    		background-size: cover;
+    		background-repeat: no-repeat;
+		}
+		
+		.header-fullscreen h3 
+		{
+    		font-size: 1.5em;
+    		font-weight: 400;
+		}
+
+		.overlay-icons
+		{
+			padding-top:140px;
+		}
+		#headline 
+		{
+    		font-family: 'Megrim', cursive;
+    		font-size: 450%;
+    		font-weight: bold;
+		}
+		
+		.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover 
+		{
+    		color: #555;
+    		background-color: #E74C3C;
+		}
+
+		h2 
+		{
+			font-family: Montserrat, sans-serif;
+    		letter-spacing: 3px;
+    		text-transform:uppercase;
+    		margin-top: 10px;
+    		margin-bottom: 10px;
+    		line-height: 1.1;
+    		color: inherit;
+        	-webkit-margin-before: 0.83em;
+    		-webkit-margin-after: 0.83em;
+    		-webkit-margin-start: 0px;
+    		-webkit-margin-end: 0px;
+    		font-weight:700;
+		}
+		
+		h1
+		{
+    		text-transform:uppercase;
+    		color:black;
+    		font-weight:700;
+		}
+		
+		h3
+		{
+			text-transform:uppercase;
+			font-weight:700;
+			letter-spacing:3px;
+			color:black;
+		}
+		
+		h4
+		{
+			text-transform:uppercase;
+			font-weight:700;
+			font-family: Montserrat, sans-serif;
+			color:#5b6770;
+		}
+		
+		h5
+		{
+			font-family: "Montserrat", sans-serif;
+			font-weight:700;
+			text-transform:uppercase;
+			font-size:12px;
+		}
+		
+		.section 
+		{
+    		padding-top: 50px;
+    		padding-bottom: 70px;
+    		background-color: #fff;
+		}
+		
+		.bg-dark .rounded-icon, .overlay .rounded-icon 
+		{
+    		color: white;
+    		border-color: white;
+    		background-color: transparent;
+		}
+
+		.rounded-icon 
+		{
+    		display: block;
+    		width: 50px;
+    		height: 50px;
+    		-moz-border-radius: 50%;
+    		-webkit-border-radius: 50%;
+    		border-radius: 50%;
+    		font-size: 20px;
+    		line-height: 46px;
+    		text-align: center;
+    		-moz-transition: all 0.3s ease-in-out;
+    		-o-transition: all 0.3s ease-in-out;
+    		-webkit-transition: all 0.3s ease-in-out;
+    		transition: all 0.3s ease-in-out;
+    		color: #FFFFFF;
+    		border: solid 2px #FFFFFF;
+    		background-color: transparent;
+    		text-decoration: none;
+		}
+		
+		#hometext 
+		{
+    		font-family: 'Marck Script', cursive;
+    		letter-spacing: 3px;
+		}
+
+		.section-title 
+		{
+   	 		text-align: center;
+		}
+		
+		.section-title .line 
+		{
+    		display: inline-block;
+    		margin-bottom: 15px;
+    		width: 100px;
+    		height: 5px;
+    		background-color: #E74C3C;
+    		-moz-transition: all 0.3s ease-in-out;
+    		-o-transition: all 0.3s ease-in-out;
+    		-webkit-transition: all 0.3s ease-in-out;
+    		transition: all 0.3s ease-in-out;
+		} 
+		
+		.bg-dark .section-title .line 
+		{
+    		background-color: white;
+		}
+		
+		#design
+		{
+			color:white;
+			margin-bottom:20px;
+			padding-bottom:20px;
+		}
+
+    	.member .member-details 
+    	{
+   			 background-color: #F3F3F3;
+    	     padding: 20px 15px;
+		}
+
+		.btn.btn-default 
+		{
+    		margin-bottom: 15px;
+    		padding: 14px 28px;
+    		border: 0;
+    		-moz-border-radius: 0;
+    		-webkit-border-radius: 0;
+    		border-radius: 0;
+    		font-size: 15px;
+    		font-weight: 400;
+    		color: white;
+    		text-transform: uppercase;
+    		background-color: #E74C3C;
+    		-moz-box-shadow: none;
+    		-webkit-box-shadow: none;
+    		box-shadow: none;
+    		-moz-transition: all 0.3s ease-in-out;
+    		-o-transition: all 0.3s ease-in-out;
+    		-webkit-transition: all 0.3s ease-in-out;
+    		transition: all 0.3s ease-in-out;
+		}
+
+		body 
+		{
+    		font-family: "Open Sans", sans-serif;
+    		font-size: 14px;
+    		font-weight: 300;
+    		color: #5b6770;
+    		-webkit-font-smoothing: antialiased;
+    		-webkit-text-size-adjust: 100%;
+    		text-rendering: optimizeLegibility;
+		}
+		
+		.my_table li 
+		{
+    		padding: 15px 20px;
+    		border-top: 1px dotted #E5E5E5;
+    		font-weight: 600;
+    		color: #29353e;
+		}
+		
+		.my_table .price 
+		{
+    		font-size: 32px;
+    		font-weight: 600;
+    		color: white;
+    		background-color: #5b6770;
+		}
+		
+		
+		.pMargins 
+		{
+    		padding-right: 15px;
+    		padding-left: 15px;
+    		margin-right: auto;
+    		margin-left: auto;
+		}
+
+		.portfolio-filters 
+		{
+    		margin-bottom: 40px;
+    		text-align: center;
+		}
+
+	
+		
+		.bg-dark 
+		{
+    		background-color: #E74C3C;
+    		color: white;
+		}
+		
+		
+
+		.bg-dark-design
+		{
+    		background-color: #E74C3C;
+    		color: white;
+		}
+	
+		
+		.page-footer 
+		{
+    		padding: 80px 0 40px 0;
+		}
+
+		element.style 
+		{
+    		display: inline;
+		}
+
+		
+
+		
+		address 
+		{
+    		margin-bottom: 20px;
+    		font-style: normal;
+   	 		line-height: 1.42857143;
+		}
+		
+		.bg-light 
+		{
+    		background-color: #F3F3F3;
+		}
+		
+		
+		
+		.table_container [class*="col"] 
+		{
+    		padding-left: 0 !important;
+    		padding-right: 0 !important;
+    		padding-top: 50px;
+    		text-align: center;
+		}
+		
+		@media (min-width: 768px)
+		.col-sm-4 
+		{
+    		width: 33.33333333%;
+		}
+
+		@media (min-width: 768px)
+		bootstrap.min.css:5
+		.col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9 
+		{
+    		float: left;
+		}
+		
+		bootstrap.min.css:5
+		.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 
+		{
+   			 position: relative;
+    		min-height: 1px;
+    		padding-right: 15px;
+    		padding-left: 15px;
+		}
+
+		bootstrap.min.css:5
+		* {
+    		-webkit-box-sizing: border-box;
+    		-moz-box-sizing: border-box;
+    		box-sizing: border-box;
+		}
+
+		user agent stylesheet
+		div 
+		{
+    		display: block;
+		}
+		
+		.service .circle 
+		{
+    		width: 150px;
+    		height: 150px;
+    		margin: 10px auto 25px auto;
+    		border: 4px solid white;
+    		background-color: white;
+    		-moz-border-radius: 50%;
+    		-webkit-border-radius: 50%;
+    		border-radius: 50%;
+    		-moz-transition: all 0.3s ease-in-out;
+    		-o-transition: all 0.3s ease-in-out;
+    		-webkit-transition: all 0.3s ease-in-out;
+    		transition: all 0.3s ease-in-out;
+    		-moz-box-shadow: #E74C3C 0 0 0 10px inset;
+    		-webkit-box-shadow: #E74C3C 0 0 0 10px inset;
+    		box-shadow: #E74C3C 0 0 0 10px inset;
+		}
+
+		bootstrap.min.css:5
+		.fa-edit:before, .fa-pencil-square-o:before 
+		{
+    		content: "\f044";
+		}
+		
+		bootstrap.min.css:5
+		:after, :before 
+		{
+    		-webkit-box-sizing: border-box;
+    		-moz-box-sizing: border-box;
+    		box-sizing: border-box;
+		}
+		
+		.service .circle .icon 
+		{
+    		text-align: center;
+    		margin-top: 10%;
+    		font-size: 70px;
+    		color: #E74C3C;
+    		-moz-transition: all 0.3s ease-in-out;
+    		-o-transition: all 0.3s ease-in-out;
+    		-webkit-transition: all 0.3s ease-in-out;
+    		transition: all 0.3s ease-in-out;
+    		-moz-transform: scale(1, 1);
+    		-ms-transform: scale(1, 1);
+    		-webkit-transform: scale(1, 1);
+    		transform: scale(1, 1);
+		}
+		
+	.row-circle
+{
+	display:inline-block;
+	padding-left:86px;
+} 
+.chart {
+  color: #999;
+  font-size: 20px;
+  display:inline-block;
+}
+
+.chart img {
+  max-width: 100px;
+  max-height: 100px;
+}
+/* END Container styles */
+
+/* Colors for the circles and positions for the graphics */
+.html {
+  top: 50px;
+  left: 45px;
+}
+
+.html + svg .outer {
+  stroke: #e34f26;
+}
+
+.css {
+  top: 55px;
+  left: 48px;
+}
+
+.css + svg .outer {
+  stroke: #0d84ce;
+}
+
+.javascript {
+  max-width: 90px;
+  max-height: 90px;
+  top: 45px;
+  left: 45px;
+}
+
+.javascript + svg .outer {
+  stroke: #f0e040;
+}
+
+.node {
+  width: 200px;
+  height: 200px;
+  top: 45px;
+  left: 45px;
+}
+
+.node + svg .outer {
+  stroke: #83cd29;
+}
+
+.chart svg {
+  top: 0;
+  left: 0;
+}
+
+.outer {
+  fill: transparent;
+  stroke: #E74C3C;
+  stroke-width: 6;
+  stroke-dasharray: 650;
+  transition: stroke-dashoffset 1s;
+  -webkit-animation-play-state: running;
+  
+  /* firefox bug fix - won't rotate at 90deg angles */
+  -moz-transform: rotate(-89deg) translateX(-190px);
+}
+
+.chart:hover .outer {
+  stroke-dashoffset: 750 !important;
+  -webkit-animation-play-state: stop;
+}
+
+.chart[data-percent='95'] .outer {
+  stroke-dashoffset: 133;
+  -webkit-animation: show95 2s;
+  animation: show95 2s;
+}
+
+@-webkit-keyframes show95 {
+  from {
+    stroke-dashoffset: 750;
+  }
+  
+  to {
+    stroke-dashoffset: 134;
+  }
+}
+
+@keyframes show95 {
+  from {
+    stroke-dashoffset: 537;
+  }
+  
+  to {
+    stroke-dashoffset: 124;
+  }
+}
+
+
+.workareas .workarea {
+   
+    border-right: solid 1px #E5E5E5;
+}
+
+
+.owl-carousel {
+    display: table;
+    width: 100%;
+    height: 200px;
+}
+
+#workarea-carousel .workarea text-center{
+  background: #42bdc2;
+  margin: 10px;
+  color: #FFF;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  text-align: center;
+}
+
+header{
+	position:fixed;
+}
+
+
+    </style>
+    
+</head>
+<body>
+
+    <div class="loader"></div>
+    
+    <!--Header-->
+    <header id="home" class="header-fullscreen">
+        <div class="overlay"></div>
+        <div id="carousel-header" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <!--Slide 1-->
+                <div id="slide1" class="item active">
+                    <div class="center_text">
+                        <div class="vcenter" style="text-align:center;">
+                          <h2 id="headline" style="display: block;">
+                            <span class="char1" style="display: inline-block; transition: none; transform: translateX(-8px) translateY(201px) rotate(-60deg);">H</span>
+                            <span class="char2" style="display: inline-block; transition: none; transform: translateX(-18px) translateY(170px) rotate(-54deg);">i</span>
+                            <span class="char3 empty" style="display: inline-block; transition: none; transform: translateX(-23px) translateY(151px) rotate(-51deg);">&nbsp;</span>
+                            <span class="char4" style="display: inline-block; transition: none; transform: translateX(-27px) translateY(132px) rotate(-48deg);">I</span>
+                            <span class="char5" style="display: inline-block; transition: none; transform: translateX(-29px) translateY(117px) rotate(-45deg);">'</span>
+                            <span class="char6" style="display: inline-block; transition: none; transform: translateX(-31px) translateY(91px) rotate(-39deg);">m</span>
+                            <span class="char7 empty" style="display: inline-block; transition: none; transform: translateX(-32px) translateY(65px) rotate(-33deg);">&nbsp;</span>
+                            <span class="char8" style="display: inline-block; transition: none; transform: translateX(-30px) translateY(48px) rotate(-28deg);">P</span>
+                            <span class="char9" style="display: inline-block; transition: none; transform: translateX(-25px) translateY(29px) rotate(-21deg);">u</span>
+                            <span class="char10" style="display: inline-block; transition: none; transform: translateX(-18px) translateY(14px) rotate(-14deg);">n</span>
+                            <span class="char11" style="display: inline-block; transition: none; transform: translateX(-10px) translateY(4px) rotate(-7deg);">e</span>
+                            <span class="char12" style="display: inline-block; transition: none; transform: translateX(0px) translateY(0px) rotate(0deg);">e</span>
+                            <span class="char13" style="display: inline-block; transition: none; transform: translateX(8px) translateY(3px) rotate(6deg);">t</span>
+                            <span class="char14" style="display: inline-block; transition: none; transform: translateX(15px) translateY(8px) rotate(11deg);">h</span>
+                            <span class="char15 empty" style="display: inline-block; transition: none; transform: translateX(19px) translateY(13px) rotate(14deg);">&nbsp;</span>
+                            <span class="char16" style="display: inline-block; transition: none; transform: translateX(24px) translateY(25px) rotate(20deg);">S</span>
+                            <span class="char17" style="display: inline-block; transition: none; transform: translateX(29px) translateY(44px) rotate(27deg);">r</span>
+                            <span class="char18" style="display: inline-block; transition: none; transform: translateX(32px) translateY(67px) rotate(33deg);">i</span>
+                            <span class="char19" style="display: inline-block; transition: none; transform: translateX(31px) translateY(95px) rotate(40deg);">k</span>
+                            <span class="char20" style="display: inline-block; transition: none; transform: translateX(27px) translateY(129px) rotate(47deg);">a</span>
+                            <span class="char21" style="display: inline-block; transition: none; transform: translateX(22px) translateY(156px) rotate(52deg);">n</span>
+                            <span class="char22" style="display: inline-block; transition: none; transform: translateX(13px) translateY(184px) rotate(57deg);">t</span>
+                            <span class="char23" style="display: inline-block; transition: none; transform: translateX(3px) translateY(214px) rotate(62deg);">a</span>
+                          </h2>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <h3 id="hometext" style="color:white;">And I create lovely web things!</h3>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--More-->
+        <a href="#about" class="scrollto" title="View more">
+            <div id="more_header" class="text-center">
+                <span class="circle">
+                    <i class="fa fa-angle-down fa-2x rounded-icon" style="margin-left:660px;color:white;"></i>
+                </span>
+            </div>
+        </a>
+    </header>
+	<!-- Header -->		
+
+
+
+    <!--Nav-->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Puneeth Srikanta</a>
+            </div>
+
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="#home">Home</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#work">Work</a></li>
+                    <li><a href="#process">Design Process</a></li>
+                    <li><a href="#hobbies">Testimonials</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--navbar ends here-->
+
+
+
+    <!--about section-->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-lg-offset-2 col-lg-8 section-title wow fadeInUp">
+                    <h1>About me</h1>
+                    <div class="line"></div>
+                    <p>Who am I?</p>
+                </div>
+            </div>
+
+            <div class="row forTableForm" style="margin-top:40px;">
+            
+                <!--1-->
+                <div class="col-sm-6 col-md-5 member wow fadeInLeft1" data-wow-delay="0.3s">
+                    <div class="member-image" style="height: 100%; padding-right: 15px; padding-bottom: 4px;">
+                        <div class="overlay-icons">
+                            <ul class="list-inline text-center social-links">
+                                <li><a href="" target="_blank"><i class="fa fa-facebook rounded-icon"></i></a></li>
+                                <li><a href="" target="_blank"><i class="fa fa-linkedin rounded-icon"></i></a></li>
+                                <li><a href="" target="_blank"><i class="fa fa-google-plus rounded-icon"></i></a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--2-->
+                <div class="col-sm-6 col-md-7 member wow fadeInRight" data-wow-delay=".3s">
+                    <div id="aboutusText" class="member-image overlay-wrapper hover-overlay">
+                        <div id="aboutinnertext">
+                            <p style="text-align: justify;">
+                                I'm a Software Engineer at Intel Inc., in Santa Clara, California.
+                                I have completed my Master's in Computer Science - at University of Houston based in Houston, TX.
+                                I specialize in Algorithms, Web Development and User Interfaces visually beautiful and delivering delightful user experience. 
+                                Alongside this, I also possess expertise in front-end development, with focus on  responsiveness, 
+                                friendly code and importantly something that's attractively suited to the topic :). 
+                                <br />
+                                <br />
+                                I enjoy understanding how great designs work and showing the same to others through good, intuitive and 
+                                user-friendly experiences. My previous experience in UI/UX Design at AT&T and iGATE Global Solutions Ltd. has given me 
+                                great exposure in crafting a comprehensive look and feel for products, working in the agile environment and 
+                                driving requirements from concept to release. Prior to this, I also had the wonderful opportunity to be a part 
+                                of NIE UI/UX Group, where I enjoyed designing Mobile and Web applications, focusing on simplicity, 
+                                and user friendly experience. 
+                                <br />
+                                <br />
+                                I love working on web design and development and have driven UI requirements from concept to deployment. Possessing 
+                                skills that are a combination of design and development, I can make things beautiful, interactive and enjoyable to use. 
+                                <br />
+                                <br />
+                                Thank you for stopping by :)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+            
+                <!--3-->
+                <div class="col-sm-6 col-md-5 member wow fadeInLeft" data-wow-delay=".3s">
+                    <div class="member-details text-center">
+                        <h4>Puneeth Srikanta</h4>
+                    </div>
+                </div>
+                
+                <!--4-->
+                <div class="col-sm-6 col-md-7 member wow fadeInRight" data-wow-delay=".3s">
+                    <div class="member-details text-center">
+                        <h4>User Experience Design Specialist at SAP</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/#team-->
+
+<!-- 
+
+    <!--work/portfolio
+    <section id="work" class="section">
+        <div class="container" style="padding-right: 0px; padding-left: 0px; margin-right: 0px; margin-left: 0px; width: 100%;">
+            <div class="row">
+                <div class="col-sm-12 col-lg-offset-2 col-lg-8 section-title wow fadeInUp">
+                    <h1>My Work</h1>
+                    <div class="line"></div>
+                    <p>"I design the right things, and I design things right :)"</p>
+                </div>
+            </div>
+            <div id="preview"></div>
+
+            work tabs
+            <div class="portfolio-filters wow fadeInUp pMargins" data-wow-delay=".1s">
+                <ul class="nav nav-pills">
+                    <li class="active"><a href="#" data-filter="*">All</a></li>
+                    <li><a href="#" data-filter=".mobile">Mobile</a></li>
+                    <li><a href="#" data-filter=".tablet">Tablet</a></li>
+                    <li><a href="#" data-filter=".web">Web</a></li>
+                    <li><a href="#" data-filter=".others">Others</a></li>
+                </ul>
+            </div>
+            <div class="pMargins">
+                <div id="portfolio-container" class="row wow fadeInUp" data-wow-delay=".1s">
+
+                    SAP2
+                    <div class="col-sm-6 col-md-3 item mobile" style="margin-bottom: 30px;">
+                        <div class="portfolio-item">
+                            <img src="img/w_sap2/pstop.jpg" alt="Thumb 2" class="img-responsive">
+                            <div class="overlay" id="sap2" style="cursor:pointer;">
+                                <div class="line"></div>
+                                <a href="img/w_sap2/pstop.jpg" class="icon-search" title="Detailed Project">
+                                    Full<br />project
+                                </a>
+                                <a href="auth/sap2.html" class="icon-link preview" title="Detailed Project">
+                                    <i class="fa fa-link rounded-icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="workname">SAP - Perfect Store</p>
+                    </div>
+
+                    SAP1
+                    <div class="col-sm-6 col-md-3 item mobile" style="margin-bottom: 30px;">
+                        <div class="portfolio-item">
+                            <img src="img/w_sap1/main1.jpg" alt="Thumb 2" class="img-responsive">
+                            <div class="overlay" id="sap1" style="cursor:pointer;">
+                                <div class="line"></div>
+                                <a href="img/w_sap1/main1.jpg" class="icon-search" title="Detailed Project">
+                                    Full<br />project
+                                </a>
+                                <a href="auth/sap1.html" class="icon-link preview" title="Detailed Project">
+                                    <i class="fa fa-link rounded-icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="workname">SAP - Wallet for Enterprise</p>
+                    </div>
+
+                    Union Capital Boston
+                    <div class="col-sm-6 col-md-3 item mobile" style="margin-bottom: 30px;">
+                        <div class="portfolio-item">
+                            <img src="img/w_ucb/ucbmain.png" alt="Thumb 5" class="img-responsive">
+                            <div class="overlay" id="UCB" style="cursor:pointer;">
+                                <div class="line"></div>
+                                <a href="img/w_ucb/1.JPG" class="icon-search" title="Detailed Project">
+                                    Full<br />project
+                                </a>
+                                <a href="UCBDesign.html" class="icon-link preview" title="Detailed Project">
+                                    <i class="fa fa-link rounded-icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="workname">Union Capital Boston</p>
+                    </div>
+
+                    TradeIt
+                    <div class="col-sm-6 col-md-3 item mobile" style="margin-bottom: 30px;">
+                        <div class="portfolio-item">
+                            <img src="img/w_tradeit/showcase1.png" alt="Thumb 2" class="img-responsive">
+                            <div class="overlay" id="tradeit" style="cursor:pointer;">
+                                <div class="line"></div>
+                                <a href="img/w_tradeit/D_Home.png" class="icon-search" title="Detailed Project">
+                                    Full<br />project
+                                </a>
+                                <a href="TradeIt.html" class="icon-link preview" title="Detailed Project">
+                                    <i class="fa fa-link rounded-icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="workname">TradeIt - Buy and Sell</p>
+                    </div>
+
+                    HCP Day Tshirt design
+                    <div class="col-sm-6 col-md-3 item others" style="margin-bottom: 30px;">
+                        <div class="portfolio-item">
+                            <img src="img/w_hcpday/hcp_top.png" alt="Thumb 2" class="img-responsive">
+                            <div class="overlay" id="hcpday" style="cursor:pointer;">
+                                <div class="line"></div>
+                                <a href="img/w_hcpday/hcp_top.png" class="icon-search" title="Detailed Project">
+                                    Full<br />project
+                                </a>
+                                <a href="HCPDay.html" class="icon-link preview" title="Detailed Project">
+                                    <i class="fa fa-link rounded-icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="workname">HCP Day T-shirt design</p>
+                    </div>
+
+                    Yelp
+                    <div class="col-sm-6 col-md-3 item mobile" style="margin-bottom: 30px;">
+                        <div class="portfolio-item">
+                            <img src="img/w_yelp/showyelp2.png" alt="Thumb 2" class="img-responsive">
+                            <div class="overlay" id="yelp" style="cursor:pointer;">
+                                <div class="line"></div>
+                                <a href="img/w_yelp/showyelp2.png" class="icon-search" title="Detailed Project">
+                                    Full<br />project
+                                </a>
+                                <a href="yelp_redesign.html" class="icon-link preview" title="Detailed Project">
+                                    <i class="fa fa-link rounded-icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="workname">Yelp - Redesign</p>
+                    </div>
+
+                    Student help website
+                    <div class="col-sm-6 col-md-3 item web" style="margin-bottom: 30px;">
+                        <div class="portfolio-item">
+                            <img src="img/w_studenthelpweb/22.jpg" alt="Thumb 5" class="img-responsive">
+                            <div class="overlay" id="stuhelp" style="cursor:pointer;">
+                                <div class="line"></div>
+                                
+                                <a href="img/w_studenthelpweb/1.jpg" class="icon-search" title="Detailed Project">
+                                    Full<br />project
+                                </a>
+                                <a href="StudentHelpWebsite.html" target="_blank" class="icon-link preview" title="Detailed Project">
+                                    <i class="fa fa-link rounded-icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="workname">International Student Help Website</p>
+                    </div>
+
+                    Google Doodle
+                    <div class="col-sm-6 col-md-3 item web" style="margin-bottom: 30px;">
+                        <div class="portfolio-item">
+                            <img src="img/w_doodle/g_15.jpg" alt="Thumb 5" class="img-responsive">
+                            <div class="overlay" id="doodle" style="cursor:pointer;">
+                                <div class="line"></div>
+                               
+                                <a href="img/w_doodle/g_1.JPG" class="icon-search" title="Detailed Project">
+                                    Full<br />project
+                                </a>
+                                <a href="DoodleDesign.html" class="icon-link preview" title="Detailed Project">
+                                    <i class="fa fa-link rounded-icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="workname">4th July Google Doodle</p>
+                    </div>
+                    
+                    PROTOTYPE - Project Management Tablet
+                    <div class="col-sm-6 col-md-3 item tablet" style="margin-bottom: 30px;">
+                        <div class="portfolio-item">
+                            <img src="img/w_pm_tablet/9.jpg" alt="Thumb 4" class="img-responsive">
+                            <div class="overlay" id="pmtablet" style="cursor:pointer;">
+                                <div class="line"></div>
+                                
+                                <a href="img/w_pm_tablet/1.jpg" class="icon-search" title="Detailed Project">
+                                    Full<br />project
+                                </a>
+                                <a href="PMTablet.html" class="icon-link preview" title="Detailed Project">
+                                    <i class="fa fa-link rounded-icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="workname">Project Management for Tablet</p>
+                    </div>
+
+                    PROTOTYPE - eApproval Android
+                    <div class="col-sm-6 col-md-3 item mobile" style="margin-bottom: 30px;">
+                        <div class="portfolio-item">
+                            <img src="img/w_eapp_android/9.jpg" alt="Thumb 1" class="img-responsive">
+                            <div class="overlay" id="eappandroid" style="cursor:pointer;">
+                                <div class="line"></div>
+                               
+                                <a href="img/w_eapp_android/1.jpg" class="icon-search" title="Detailed Project">
+                                    Full<br />project
+                                </a>
+                                <a href="eApprovalAndroid.html" class="icon-link preview" title="Detailed Project">
+                                    <i class="fa fa-link rounded-icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="workname">eApproval for Android</p>
+                    </div>
+
+                    PROTOTYPE - eApproval iPhone
+                    <div class="col-sm-6 col-md-3 item mobile" style="margin-bottom: 30px;">
+                        <div class="portfolio-item">
+                            <img src="img/w_eapp_iphone/10.jpg" alt="Thumb 1" class="img-responsive">
+                            <div class="overlay" id="eappiphone" style="cursor:pointer;">
+                                <div class="line"></div>
+                               
+                                <a href="img/w_eapp_iphone/1.jpg" class="icon-search" title="Detailed Project">
+                                    Full<br />project
+                                </a>
+                                <a href="eApprovalIphone.html" class="icon-link preview" title="Detailed Project">
+                                    <i class="fa fa-link rounded-icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="workname">eApproval for iPhone</p>
+                    </div>
+
+                    
+
+                    PROTOTYPE - PROJECT MANAGEMENT iPad
+                    <div class="col-sm-6 col-md-3 item tablet" style="margin-bottom: 30px;">
+                        <div class="portfolio-item">
+                            <img src="img/w_pm_ipad/10.jpg" alt="Thumb 3" class="img-responsive">
+                            <div class="overlay" id="pmipad" style="cursor:pointer;">
+                                <div class="line"></div>
+                                <a href="img/w_pm_ipad/1.jpg" class="icon-search" title="Detailed Project">
+                                    Full<br />project
+                                </a>
+                                <a href="PMiPad.html" class="icon-link preview" title="Detailed Project">
+                                    <i class="fa fa-link rounded-icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="workname">Project Management for iPad</p>
+                    </div>
+
+                    Traffic light experiment
+                    <div class="col-sm-6 col-md-3 item experiments">
+                        <div class="portfolio-item">
+                            <img src="img/w_trafficlight/trafficCover.png" alt="Thumb 6" class="img-responsive">
+                            <div class="overlay" id="traffic">
+                                <div class="line"></div>
+                                <a href="img/w_trafficlight/trafficCover.png" target="_blank" class="icon-search traffic_gallery work_view_images" title="Image Gallery">
+                                    <i class="fa fa-search rounded-icon"></i>
+                                </a>
+
+                                <a href="https://www.justinmind.com/usernote/tests/16872325/16915780/17616660/index.html" target="_blank" class="icon-link" title="Prototype">
+                                    <i class="fa fa-link rounded-icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="workname">Traffic Light Experiment</p>
+                    </div>
+
+                </div>
+                
+                <hr style="margin-top:20px;" />
+                <br />
+
+                <div id="Div5" class="row wow fadeInUp">
+
+                    Digital Art
+                    <div class="col-sm-6 col-md-3 item others" style="margin-bottom: 30px;">
+                        <div class="portfolio-item">
+                            <img src="img/w_digital/movie.JPG" alt="Thumb 2" class="img-responsive">
+                            <div class="overlay" id="digital" style="cursor:pointer;">
+                                <div class="line"></div>
+                                <a href="img/w_digital/movie.gif" class="icon-link" title="Digital Art">
+                                    Full<br />Image
+                                </a>
+                                <a href="img/w_digital/movie.gif" class="icon-search digital_gallery work_view_images" title="Detailed Project">
+                                    <i class="fa fa-link rounded-icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="workname">Digital Art</p>
+                    </div>
+
+                    Jacket design
+                    <div class="col-sm-6 col-md-3 item others" style="margin-bottom: 30px;">
+                        <div class="portfolio-item">
+                            <img src="img/w_jacket/svnt.png" alt="Thumb 2" class="img-responsive">
+                            <div class="overlay" id="jacket" style="cursor:pointer;">
+                                <div class="line"></div>
+                                <a href="img/w_jacket/svnt.png" class="icon-link" title="Jacket Design">
+                                    Full<br />Image
+                                </a>
+                                <a href="img/w_jacket/svnt.png" class="icon-search jacket_gallery work_view_images" title="Detailed Project">
+                                    <i class="fa fa-link rounded-icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="workname">SAP - SVNT Jacket Design</p>
+                    </div>
+
+                    Motion Icons
+                    <div class="col-sm-6 col-md-3 item others" style="margin-bottom: 30px;">
+                        <div class="portfolio-item">
+                            <img src="img/w_motion/threemotionsgif.gif" alt="Thumb 2" class="img-responsive">
+                            <div class="overlay" id="motion" style="cursor:pointer;">
+                                <div class="line"></div>
+                                <a href="img/w_logos/design_logo.jpg" class="icon-search logos_gallery work_view_images" title="Image Gallery">
+                                    <i class="fa fa-search rounded-icon"></i>
+                                </a>
+                                <a href="img/w_logos/Branding-Stationery%20Mockup.jpg" class="logos_gallery work_view_images"></a>
+                                <a href="img/w_motion/threemotionsgif.gif" class="icon-link" title="Motion Icons">
+                                    Full<br />Image
+                                </a>
+                                <a href="img/w_motion/threemotionsgif.gif" class="icon-search motion_gallery work_view_images" title="Detailed Project">
+                                    <i class="fa fa-link rounded-icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="workname">Motion Icons</p>
+                    </div>
+
+                    LOGOS
+                    <div class="col-sm-6 col-md-3 item others" style="margin-bottom: 30px;">
+                        <div class="portfolio-item">
+                            <img src="img/w_logos/6.JPG" alt="Thumb 2" class="img-responsive">
+                            <div class="overlay" id="logos" style="cursor:pointer;">
+                                <div class="line"></div>
+                                <a href="img/w_logos/design_logo.jpg" class="icon-search logos_gallery work_view_images" title="Image Gallery">
+                                    <i class="fa fa-search rounded-icon"></i>
+                                </a>
+                                <a href="img/w_logos/eapp_logo.jpg" class="logos_gallery work_view_images"></a>
+                                <a href="img/w_logos/1.jpg" class="logos_gallery work_view_images"></a>
+                                <a href="img/w_logos/2.jpg" class="logos_gallery work_view_images"></a>
+                                <a href="img/w_logos/3.jpg" class="logos_gallery work_view_images"></a>
+                                <a href="img/w_logos/4.jpg" class="logos_gallery work_view_images"></a>
+                                <a href="img/w_logos/5.jpg" class="logos_gallery work_view_images"></a>
+                                <a href="img/w_logos/6.JPG" class="logos_gallery work_view_images"></a>
+                                <a href="img/w_logos/7.jpg" class="logos_gallery work_view_images"></a>
+                                <a href="img/w_logos/Branding-Stationery%20Mockup.jpg" class="logos_gallery work_view_images"></a>
+                                <a href="img/w_logos/design_logo.jpg" class="icon-search" title="Detailed Project">
+                                    Full<br />project
+                                </a>
+                                <a href="Logos.html" class="icon-link preview" title="Detailed Project">
+                                    <i class="fa fa-link rounded-icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="workname">Logos</p>
+                    </div>
+                    
+
+                    Typography experiment
+                    <div class="col-sm-6 col-md-3 item others">
+                        <div class="portfolio-item">
+                            <img src="img/w_typography/1.JPG" alt="Thumb 6" class="img-responsive">
+                            <div class="overlay" id="typography" style="cursor:pointer;">
+                                <div class="line"></div>
+                                <a href="img/w_typography/1.JPG" target="_blank" class="icon-search typography_gallery work_view_images" title="Image Gallery">
+                                    <i class="fa fa-search rounded-icon"></i>
+                                </a>
+                                <a href="img/w_typography/2.JPG" class="typography_gallery work_view_images"></a>
+                                <a href="img/w_typography/3.JPG" class="typography_gallery work_view_images"></a>
+                                <a href="img/w_typography/4.jpg" class="typography_gallery work_view_images"></a>
+                                <a href="img/w_typography/5.jpg" class="typography_gallery work_view_images"></a>
+                                <a href="img/w_typography/6.jpg" class="typography_gallery work_view_images"></a>
+                                <a href="img/w_typography/1.JPG" class="icon-search" title="Detailed Project">
+                                    Full<br />project
+                                </a>
+                                <a href="Typography.html" class="icon-link preview" title="Detailed Project">
+                                    <i class="fa fa-link rounded-icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="workname">Typography</p>
+                    </div>
+
+                    TATOO Design
+                    <div class="col-sm-6 col-md-3 item others" style="margin-bottom: 30px;">
+                        <div class="portfolio-item">
+                            <img src="img/w_tatoo/6.JPG" alt="Thumb 6" class="img-responsive">
+                            <div class="overlay" id="tatoo" style="cursor:pointer;">
+                                <div class="line"></div>
+                                <a href="img/w_tatoo/1.JPG" class="icon-search tatoo_gallery work_view_images" title="Image Gallery">
+                                    <i class="fa fa-search rounded-icon"></i>
+                                </a>
+                                <a href="img/w_tatoo/2.JPG" class="tatoo_gallery work_view_images"></a>
+                                <a href="img/w_tatoo/3.JPG" class="tatoo_gallery work_view_images"></a>
+                                <a href="img/w_tatoo/4.jpg" class="tatoo_gallery work_view_images"></a>
+                                <a href="img/w_tatoo/5.JPG" class="tatoo_gallery work_view_images"></a>
+                                <a href="img/w_tatoo/6.JPG" class="tatoo_gallery work_view_images"></a>
+                                <a href="img/w_tatoo/7.jpg" class="tatoo_gallery work_view_images"></a>
+                                <a href="img/w_tatoo/8.jpg" class="tatoo_gallery work_view_images"></a>
+                                <a href="img/w_tatoo/1.JPG" class="icon-search" title="Detailed Project">
+                                    Full<br />project
+                                </a>
+                                <a href="TatooDesign.html" class="icon-link preview" title="Detailed Project">
+                                    <i class="fa fa-link rounded-icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="workname">Tatoo Designs</p>
+                    </div>
+
+                    net4 homepage templates
+                    <div class="col-sm-6 col-md-3 item others" style="margin-bottom: 30px;">
+                        <div class="portfolio-item">
+                            <img src="img/w_net4design/9.jpg" alt="Thumb 5" class="img-responsive">
+                            <div class="overlay" id="net4" style="cursor:pointer;">
+                                <div class="line"></div>
+                                &lt;!&ndash;<a href="img/w_net4design/1.jpg" class="icon-search net4design_gallery work_view_images" title="Image Gallery">
+                                    <i class="fa fa-search rounded-icon"></i>
+                                </a>
+                                <a href="img/w_net4design/2.jpg" class="net4design_gallery work_view_images"></a>
+                                <a href="img/w_net4design/3.jpg" class="net4design_gallery work_view_images"></a>
+                                <a href="img/w_net4design/4.png" class="net4design_gallery work_view_images"></a>
+                                <a href="img/w_net4design/5.png" class="net4design_gallery work_view_images"></a>
+                                <a href="img/w_net4design/6.png" class="net4design_gallery work_view_images"></a>
+                                <a href="img/w_net4design/7.png" class="net4design_gallery work_view_images"></a>
+                                <a href="img/w_net4design/8.png" class="net4design_gallery work_view_images"></a>
+                                <a href="img/w_net4design/9.jpg" class="net4design_gallery work_view_images"></a>&ndash;&gt;
+                                <a href="img/w_net4design/1.jpg" class="icon-search" title="Detailed Project">
+                                    Full<br />project
+                                </a>
+                                <a href="Net4Design.html" class="icon-link preview" title="Detailed Project">
+                                    <i class="fa fa-link rounded-icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="workname">College website template</p>
+                    </div>
+
+                    Kitties for All
+                    <div class="col-sm-6 col-md-3 item others" style="margin-bottom: 30px;">
+                        <div class="portfolio-item">
+                            <img src="img/w_kitties4all/top.JPG" alt="Thumb 2" class="img-responsive">
+                            <div class="overlay" id="kitties4all" style="cursor:pointer;">
+                                <div class="line"></div>
+                                <a href="img/w_kitties4all/structure.png" class="icon-search kitties4all_gallery work_view_images" title="Image Gallery">
+                                    <i class="fa fa-search rounded-icon"></i>
+                                </a>
+                                <a href="img/w_kitties4all/2.jpg" class="kitties4all_gallery work_view_images"></a>
+                                <a href="img/w_kitties4all/3.JPG" class="kitties4all_gallery work_view_images"></a>
+                                <a href="img/w_kitties4all/4.jpg" class="kitties4all_gallery work_view_images"></a>
+                                <a href="img/w_kitties4all/5.JPG" class="kitties4all_gallery work_view_images"></a>
+                                <a href="img/w_kitties4all/6.jpg" class="kitties4all_gallery work_view_images"></a>
+                                <a href="img/w_kitties4all/7.jpg" class="kitties4all_gallery work_view_images"></a>
+                                <a href="img/w_kitties4all/8.JPG" class="kitties4all_gallery work_view_images"></a>
+                                <a href="img/w_kitties4all/9.jpg" class="kitties4all_gallery work_view_images"></a>
+                                <a href="img/w_kitties4all/10.JPG" class="kitties4all_gallery work_view_images"></a>
+                                <a href="img/w_kitties4all/11.JPG" class="kitties4all_gallery work_view_images"></a>
+                                <a href="img/w_kitties4all/12.JPG" class="kitties4all_gallery work_view_images"></a>
+                                <a href="img/w_kitties4all/13.JPG" class="kitties4all_gallery work_view_images"></a>
+                                <a href="img/w_kitties4all/top.JPG" class="kitties4all_gallery work_view_images"></a>
+                                <a href="img/w_kitties4all/structure.png" class="icon-search" title="Detailed Project">
+                                    Full<br />project
+                                </a>
+                                <a href="Kitties4All.html" class="icon-link preview" title="Detailed Project">
+                                    <i class="fa fa-link rounded-icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="workname">Kitties for All</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+   -->
+   
+   
+    <section id="process" class="bg-dark" style="height:500px;">
+        <div class="container">
+            <div class="row" style="padding-top:50px;">
+                <div class="col-sm-12 col-lg-offset-2 col-lg-8 section-title wow fadeInUp">
+                    <h1 id="design">My Design Process</h1>
+                </div>
+                <div class="line"></div>
+                <p style="width:750px; padding-left:500px;">One out of a hundred ways!!</p>
+            </div>
+
+            <div class="row" style="padding-top:26px;">
+                <div class="col-sm-6 col-md-2 service wow fadeInLeft" data-wow-delay=".3s">
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <div class="circle">
+                                <div class="icon">
+                                    <i class="fa fa-pencil-square-o"></i>
+                                </div>
+                            </div>
+                            <h5>Research</h5>
+                        </div>
+                        <div class="col-sm-2" id="stepsarrow" style="padding-top: 70px;">
+                            <i class="fa fa-arrow-right" style="font-size:15px;"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-2 service wow fadeInLeft" data-wow-delay=".3s">
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <div class="circle">
+                                <div class="icon">
+                                    <i class="fa fa-table" style="font-size:50px;"></i>
+                                </div>
+                            </div>
+                            <h5>Wireframes</h5>
+                        </div>
+                        <div class="col-sm-2" id="Div1" style="padding-top: 70px;">
+                            <i class="fa fa-arrow-right" style="font-size:15px;"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-2 service wow fadeInLeft" data-wow-delay=".3s">
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <div class="circle">
+                                <div class="icon">
+                                    <i class="fa fa-paint-brush" style="font-size:50px;"></i>
+                                </div>
+                            </div>
+                            <h5>Visual concepts</h5>
+                        </div>
+                        <div class="col-sm-2" id="Div2" style="padding-top: 70px;">
+                            <i class="fa fa-arrow-right" style="font-size:15px;"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-2 service wow fadeInRight" data-wow-delay=".3s">
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <div class="circle">
+                                <div class="icon">
+                                    <i class="fa fa-indent" style="font-size:50px;"></i>
+                                </div>
+                            </div>
+                            <h5>Prototypes</h5>
+                        </div>
+                        <div class="col-sm-2" id="Div3" style="padding-top: 70px;">
+                            <i class="fa fa-arrow-right" style="font-size:15px;"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-2 service wow fadeInRight" data-wow-delay=".3s">
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <div class="circle">
+                                <div class="icon">
+                                    <i class="fa fa-users" style="font-size:50px;"></i>
+                                </div>
+                            </div>
+                            <h5>User testing</h5>
+                        </div>
+                        <div class="col-sm-2" id="Div4" style="padding-top: 70px;">
+                            <i class="fa fa-arrow-right" style="font-size:15px;"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-2 service wow fadeInRight" data-wow-delay=".3s">
+                    <div class="circle">
+                        <div class="icon">
+                            <i class="fa fa-file-code-o" style="font-size:50px;"></i>
+                        </div>
+                    </div>
+                    <h5>Development</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+<!--     My Testimonials
+    <section id="hobbies" class="section" data-stellar-background-ratio="0.5">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-lg-offset-2 col-lg-8 section-title wow fadeInUp">
+                    <h1></h1>
+                </div>
+            </div>
+
+            <div class="row wow fadeInUp">
+                <div id="hobby-carousel" class="hobbies owl-carousel">
+                    <div class="item col-xs-10 col-xs-offset-1 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+                        <blockquote>
+                            <i class="fa fa-quote-left fa-4x"></i>
+                            <br>
+                            <img src="img/ProfJim.jpg" style="height: 30%; width: 30%;" />
+                            <p>
+                                "Jagruti is a delight to work with.  Her sense of design is excellent, 
+                                and as leader of a team of 5 peers she did a great job motivating them 
+                                to produce an outstanding project under considerable pressure."
+                            </p>
+                            <cite>- Jim Miller - Vice President - Product Development, Google -</cite>
+                        </blockquote>
+                    </div>
+
+                    <div class="item col-xs-10 col-xs-offset-1 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+                        <blockquote>
+                            <i class="fa fa-quote-left fa-4x"></i>
+                            <br>
+                            <img src="img/creation1.JPG" style="width: 100%; height: 20%;" />
+                            <cite>- My Creation - Postcard -</cite>
+                        </blockquote>
+                    </div>
+
+                    <div class="item col-xs-10 col-xs-offset-1 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+                        <blockquote>
+                            <i class="fa fa-quote-left fa-4x"></i>
+                            <br>
+                            <img src="img/ProfShubha.jpg" style="height: 28%; width: 28%;" />
+                            <p>
+                                "Jagruti has an amazing eye for aesthetic design. I was impressed with her enthusiasm and passion to think deeper about projects she works on. 
+                                She has great intuition for when things look just right or when there's something even minor missing. She's cheerful and fun to work with!"
+                            </p>
+                            <cite>- Shubha Puthran - Associate Professor, NMIMS University -</cite>
+                        </blockquote>
+                    </div>
+
+                    <div class="item col-xs-10 col-xs-offset-1 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+                        <blockquote>
+                            <i class="fa fa-quote-left fa-4x"></i>
+                            <br>
+                            <img src="img/PratikDhandharia.jpg" style="height: 28%; width: 28%;" />
+                            <p>
+                                "Passionate and hard-working, Jagruti has a great design instinct when it comes to making sure 
+                                everything on the screen looks perfect. She has been seen to come up with innovative interfaces 
+                                by going about her love for making things look beautiful! - but within the given constraints."
+                            </p>
+                            <cite>- Pratik Dhandharia - Software Developer, HP -</cite>
+                        </blockquote>
+                    </div>
+
+                    <div class="item col-xs-10 col-xs-offset-1 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+                        <blockquote>
+                            <i class="fa fa-quote-left fa-4x"></i>
+                            <br>
+                            <img src="img/AnujDalal.jpg" style="height: 28%; width: 28%;" />
+                            <p>
+                                "Jagruti is impressively conscious of the latest trends and brings about a good mix-and-match of 
+                                user interface elements. She is dedicated towards understanding her users to enhance their experiences. She 
+                                brings about a good balance by taking her creativity in the right direction owing to her development knowledge 
+                                and is a pleasure to work with!"
+                            </p>
+                            <cite>- Anuj Dalal - Associate Systems Engineer, Intralinks -</cite>
+                        </blockquote>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+ -->
+    <!--skills-->
+    <section id="skills" class="section bg-light" style="background-color:#F3F3F3">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-lg-offset-2 col-lg-8 section-title wow fadeInUp">
+                    <h1>What I do best</h1>
+                    <div class="line"></div>
+                    <p>My handy skills</p>
+                </div>
+            </div>
+			
+			<div class="row-circle">
+                <div class="col-sm-6 col-md-3 skill">
+						<figure class="chart" data-percent="95">
+							<input type="text" class="knob" value="95" data-fgcolor="#E74C3C" data-bgcolor="#EEEEEE" readonly="readonly" style="width: 180px;height: 170px;position: absolute;border: 0px;background: none;text-align: center;color: inherit;/* padding: 0px; */-webkit-appearance: none;">
+					    		<svg width="200" height="200">
+      								<circle class="outer" cx="95" cy="95" r="85" transform="rotate(-90, 95, 95)"/>
+    							</svg>
+  						</figure>
+  						 <h5 style="padding-left:36px;font-family:Montserrat, sans-serif;font-weight: 700;text-transform: uppercase;margin-top: 10px;margin-bottom: 10px;font-size: 14px;">HTML5 &amp; CSS3</h5>
+				</div>
+
+			
+                <div class="col-sm-6 col-md-3 skill">
+						<figure class="chart" data-percent="95">
+							<input type="text" class="knob" value="90" data-fgcolor="#E74C3C" data-bgcolor="#EEEEEE" readonly="readonly" style="width: 180px;height: 170px;position: absolute;vertical-align: middle;/* margin-top: 66px; *//* margin-left: -152px; */border: 0px;background: none;text-align: center;color: inherit;/* padding: 0px; */-webkit-appearance: none;">
+					    		<svg width="200" height="200">
+      								<circle class="outer" cx="95" cy="95" r="85" transform="rotate(-90, 95, 95)"/>
+    							</svg>
+  						</figure>
+  						<h5 style="font-family:Montserrat, sans-serif;font-weight: 700;text-transform: uppercase;margin-top: 10px;margin-bottom: 10px;font-size: 14px;width:266px;">Visual &amp; Interaction Design</h5>
+				</div>
+
+				 <div class="col-sm-6 col-md-3 skill">
+						<figure class="chart" data-percent="95">
+							<input type="text" class="knob" value="92" data-fgcolor="#E74C3C" data-bgcolor="#EEEEEE" readonly="readonly" style="width: 180px;height: 170px;position: absolute;vertical-align: middle;/* margin-top: 66px; *//* margin-left: -152px; */border: 0px;background: none;text-align: center;color: inherit;/* padding: 0px; */-webkit-appearance: none;">
+					    		<svg width="200" height="200">
+      								<circle class="outer" cx="95" cy="95" r="85" transform="rotate(-90, 95, 95)"/>
+    							</svg>
+  						</figure>
+  						<h5 style="padding-left:36px;font-family:Montserrat, sans-serif;font-weight: 700;text-transform: uppercase;margin-top: 10px;margin-left:22px;margin-bottom: 10px;font-size: 14px;">Branding</h5>
+				</div>
+				
+				 <div class="col-sm-6 col-md-3 skill">
+						<figure class="chart" data-percent="95">
+							<input type="text" class="knob" value="85" data-fgcolor="#E74C3C" data-bgcolor="#EEEEEE" readonly="readonly" style="width: 180px;height: 170px;position: absolute;vertical-align: middle;/* margin-top: 66px; *//* margin-left: -152px; */border: 0px;background: none;text-align: center;color: inherit;/* padding: 0px; */-webkit-appearance: none;">
+					    		<svg width="200" height="200">
+      								<circle class="outer" cx="95" cy="95" r="85" transform="rotate(-90, 95, 95)"/>
+    							</svg>
+  						</figure>
+  						<h5 style="padding-left:36px;font-family:Montserrat, sans-serif;font-weight: 700;text-transform: uppercase;margin-top: 10px;margin-bottom: 10px;font-size: 14px;">JavaScript &amp; JQuery</h5>
+				</div>
+                </div> 
+                </div>     
+    </section>
+    <!--skills-->
+
+    <!--Work areas-->
+    <section id="workareas" class="bg-dark" style="height:250px;">
+        <div class="container">
+            <div class="row" >
+                <div class="col-sm-12" >
+                    <div id="workarea-carousel" class="owl-carousel owl-theme-workareas" style="padding-top:80px;padding-left:60px;">
+                        <div class="workarea text-center" style="display:inline-block;width:226.875px;height:18.889;padding-top:40px;padding-bottom:20px;border-right-width:1.111px;border-right: solid 1px #E5E5E5;">
+                            <a href="#" target="_blank" style="text-decoration:none; color:white;text-align:center;">Web</a>
+                        </div>
+
+                        <div class="workarea text-center" style="display:inline-block;width:226.875px;height:18.889;padding-top:40px;padding-bottom:20px;border-right-width:1.111px;border-right: solid 1px #E5E5E5;">
+                            <a href="#" target="_blank" style="text-decoration:none; color:white;">Tablet</a>
+                        </div>
+
+                        <div class="workarea text-center" style="display:inline-block;width:226.875px;height:18.889;padding-top:40px;padding-bottom:20px;border-right-width:1.111px;border-right: solid 1px #E5E5E5;">
+                            <a href="#" target="_blank" style="text-decoration:none; color:white;">Mobile</a>
+                        </div>
+
+                        <div class="workarea text-center" style="display:inline-block;width:226.875px;height:18.889;padding-top:40px;padding-bottom:20px;border-right-width:1.111px;border-right: solid 1px #E5E5E5;">
+                            <a href="#" target="_blank" style="text-decoration:none; color:white;">Logos</a>
+                        </div>
+
+                        <!-- <div class="workarea text-center" style="display:inline-block;width:226.875px;height:18.889;padding-top:40px;padding-bottom:20px;border-right-width:1.111px;border-right: solid 1px #E5E5E5;">
+                            <a href="#" target="_blank" style="text-decoration:none; color:white;">Doodles</a>
+                        </div>
+
+                        <div class="workarea text-center" style="display:inline-block;width:226.875px;height:18.889;padding-top:40px;padding-bottom:20px;border-right-width:1.111px;border-right: solid 1px #E5E5E5;">
+                            <a href="#" target="_blank" style="text-decoration:none; color:white;">Book Design</a>
+                        </div>
+
+                        <div class="workarea text-center" style="display:inline-block;width:226.875px;height:18.889;padding-top:40px;padding-bottom:20px;border-right-width:1.111px;border-right: solid 1px #E5E5E5;">
+                            <a href="#" target="_blank" style="text-decoration:none; color:white;">Tatoo Design</a>
+                        </div>
+
+                        <div class="workarea text-center" style="display:inline-block;width:226.875px;height:18.889;padding-top:40px;padding-bottom:20px;border-right-width:1.111px;border-right: solid 1px #E5E5E5;">
+                            <a href="#" target="_blank" style="text-decoration:none; color:white;">Typography</a>
+                        </div>
+
+                        <div class="workarea text-center" style="display:inline-block;width:226.875px;height:18.889;padding-top:40px;padding-bottom:20px;border-right-width:1.111px;border-right: solid 1px #E5E5E5;">
+                            <a href="#" target="_blank" style="text-decoration:none; color:white;">Motion Design</a>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--Extra table-->
+    <section id="extra" class="section bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-lg-offset-2 col-lg-8 section-title wow fadeInUp">
+                    <h1>Experience</h1>
+                    <div class="line"></div>
+                    <p>What I'm good at in a nutshell</p>
+                </div>
+            </div>
+
+            <div class="row table_container" style="padding-top:40px;">
+                <div class="col-sm-4">
+                    <ul class="my_table wow fadeInUp" data-wow-delay=".3s">
+                        <li class="price" style="list-style-type: none;height:67px;padding-top:10px;">Skills</li>
+                        <li style="list-style-type: none;">HTML, CSS & JS</li>
+                        <li style="list-style-type: none;">Bootstrap & Responsive Design</li>
+                        <li style="list-style-type: none;">Interaction Design</li>
+                        <li style="list-style-type: none;">Visual Design</li>
+                        <li style="list-style-type: none;">Wireframing & Prototyping</li>
+                        <li style="list-style-type: none;">User Research & Usability Testing</li>
+                        <li class="footer" style="list-style-type: none;background-color:#E74C3C;height:67px;padding-top:10px;">
+                        	<a href="#" class="btn btn-default">UI & UX</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-sm-4" style="padding-top:20px;">
+                    <ul class="my_table active wow fadeInUp" data-wow-delay=".6s">
+                        <li class="price" style="background-color: #E74C3C;list-style-type: none;height:67px;padding-top:10px;">Work Experience</li>
+                        <li style="list-style-type: none;">Intel, CA, USA</li>
+                        <li style="list-style-type: none;">AT&T, TX, USA</li>
+                        <li style="list-style-type: none;">iGATE Global Solutions, India</li>
+                        <li style="list-style-type: none;">Member of NIE, MYS, IND</li>
+                        <li style="list-style-type: none;">Member of UHUX, TX, USA</li>
+                        <li class="footer" style="list-style-type: none;background-color:#E74C3C;height:67px;padding-top:10px;">
+                        	<a href="#" class="btn btn-default">Full time & Internships</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-sm-4">
+                    <ul class="my_table wow fadeInUp" data-wow-delay=".9s">
+                        <li class="price" style="list-style-type: none;height:67px;padding-top:10px;">Tools</li>
+                        <li style="list-style-type: none;">Keynote</li>
+                        <li style="list-style-type: none;">Adobe CC, Sketch, Omnigraffle</li>
+                        <li style="list-style-type: none;">Axure, Framer, Invision</li>
+                        <li style="list-style-type: none;">Quartz Composer</li>
+                        <li style="list-style-type: none;">Pencil & Paper, Keynotes</li>
+                        <li style="list-style-type: none;">Marvel, Balsamiq, UXPIN</li>
+                        <li class="footer" style="list-style-type: none;background-color:#E74C3C;height:67px;padding-top:10px;">
+                        	<a href="#" class="btn btn-default">Brainstorming & UI Design</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--extra table-->
+
+    <!--Contact me-->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-lg-offset-2 col-lg-8 section-title wow fadeInUp">
+                    <h1 style="text-transform:uppercase;font-weight:700;">Contact me</h1>
+                    <div class="line"></div>
+                    <p>Get in touch with me!</p>
+                </div>
+            </div>
+
+            <div class="row" style="padding-top:40px;">
+                <div class="col-sm-4 contact wow bounceIn" data-wow-delay=".3s">
+                    <div class="icon" style="padding-left:115px;">
+                        <i class="fa fa-envelope fa-3x" style="color:#E74C3C;" ></i>
+                    </div>
+                    <address style="padding-top:25px;padding-left:50px;">
+                        <a href="mailto:#" style="text-decoration:none;color:black;">puneethsrikanta@gmail.com</a><br>
+                        <a href="mailto:#" style="text-decoration:none;color:black;">srikantax.puneeth@intel.com</a>
+                    </address>
+                </div>
+                <div class="col-sm-4 contact wow bounceIn" data-wow-delay=".6s">
+                    <div class="icon" style="padding-left:140px;">
+                        <i class="fa fa-phone fa-3x" style="color:#E74C3C;"></i>
+                    </div>
+                    <address style="padding-top:25px;padding-left:115px;">
+                        +1 832-808-8862
+                    </address>
+                </div>
+                <div class="col-sm-4 contact wow bounceIn" data-wow-delay=".9s">
+                    <div class="icon" style="padding-left:85px;">
+                        <i class="fa fa-map-marker fa-3x" style="color:#E74C3C;"></i>
+                    </div>
+                    <address style="padding-top:25px;padding-left:65px;">
+                        San Jose<br>
+                        CA - 95110, United States
+				
+                    </address>
+                </div>
+            </div>
+
+            <div class="row" style="padding-top:40px;">
+                <div class="col-sm-6 inner-right border-right wow fadeInLeft" data-wow-delay=".3s">
+                    <h3>Leave a Message</h3>
+                    <form name="contactForm" action="contact.php" method="POST" id="contactForm" novalidate>
+                        <div class="control-group">
+                            <div class="controls">
+                                <input type="text" class="form-control" name="name" placeholder="Name (Required)" required data-validation-required-message="Please enter your name.">
+                                <p class="help-block"></p>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <div class="controls">
+                                <input type="email" class="form-control" name="email" placeholder="Email (Required)" required data-validation-required-message="Please enter your email address.">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <div class="controls">
+                                <input type="text" class="form-control" name="subject" placeholder="Subject" style="margin-top:10px;">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <div class="controls">
+                                <textarea class="form-control" name="message" rows="10" placeholder="Enter your message ..." required data-validation-required-message="Please enter a message." style="margin-top:10px;"></textarea>
+                            </div>
+                        </div>
+                        <div class="success"></div>
+                        <button type="submit" class="btn btn-default btn-lg" style="margin-top:10px;background-color:#E74C3C;">Send Message</button>
+                    </form>
+                    <!--/#contactForm-->
+                </div>
+
+                <div class="col-sm-6 inner-left wow fadeInRight" data-wow-delay=".3s">
+                    <h3>Additional info</h3>
+                    <p style="font-family: "Open Sans", sans-serif;font-size: 14px;font-weight: 300;">For any extra information on my work, to know more about this site, or to simply get in touch, send me a message here!</p>
+                    <hr>
+                    <br />
+                    <h3>See More!</h3>
+                    <a href="http://file:///C:/Users/Puneeth/Desktop/Puneeth%20Srikanta_Resume.pdf" target="_blank" style="text-decoration: underline;">My Resume</a>
+                    <br />
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--Footer-->
+    <footer class="page-footer bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="social-links wow fadeInDown">
+                    <ul class="list-inline text-center">
+                        <li><a href="" target="_blank"><i class="fa fa-facebook rounded-icon"></i></a></li>
+                        <li><a href="" target="_blank"><i class="fa fa-linkedin rounded-icon"></i></a></li>
+                        <li><a href="" target="_blank"><i class="fa fa-google-plus rounded-icon"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="copyrights text-center wow fadeInUp">
+                    <p style="padding-top:20px;">&copy; 2017 <a href="#" style="text-decoration:none;color:white;">Puneeth Srikanta</a></p>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="scroll-to-top" title="Scroll to top">
+       				<i class="fa fa-angle-double-up" style="font-size:26px;float:right;padding-right:20px;color:white;" aria-hidden="true"></i>
+    			</a>
+    </footer>
+
+   <!-- back to top
+    <a href="#" class="scroll-to-top" title="Scroll to top">
+       <i class="fa fa-angle-double-up" style="font-size:36px" aria-hidden="true"></i>
+    </a> --> 
+
+    <!--JavaScript
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.3/jquery.sticky.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stellar.js/0.6.2/jquery.stellar.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/jquery.magnific-popup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.2.0/imagesloaded.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-Knob/1.2.12/jquery.knob.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+    <script src="js/jqBootstrapValidation.min.js"></script>
+    <script src="js/twitterFetcher.min.js"></script>
+    <script src="js/main.js"></script>
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.1/js/lightbox.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="app/Scripts/jquery-3.2.1.min.js"></script>
+	<script src="app/Scripts/bootstrap.min.js"></script>
+	<script src="app/Scripts/ui-bootstrap-tpls-0.14.3.min.js"></script>
+	<script src="app/Scripts/bootstrap.js"></script>	
+    <script src="js/jquery.arctext.js"></script>
+    
+    
+    <script type="text/javascript">
+        var $headline = $('#headline').hide();
+        google.load('webfont', '1');
+
+        google.setOnLoadCallback(function () {
+            WebFont.load({
+                google: {
+                    families: ['Montserrat', 'Concert One']
+                },
+                fontactive: function (fontFamily, fontDescription) {
+                    init();
+                },
+                fontinactive: function (fontFamily, fontDescription) {
+                    init();
+                }
+            });
+        });
+
+        function init() {
+            $headline.show().arctext({ radius: 400 });
+        };
+
+    </script> -->
+</body>
+</html>

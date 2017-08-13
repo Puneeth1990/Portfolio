@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   
+   	<script>
+   		var app=angular.module('myApp',[]);
+   		app.controller('contactFormCtrl', function($scope, $http){
+   			$scope.formModel={};
+   			
+   			if(valid){
+   				$scope.onSubmit = function(){
+   					console.log("Hi! Puneeth");
+   					console.log($scope.formModel);
+   				} 
+   				else
+   					{
+   						console.log("Invalid Form!");
+   					}
+   			};
+   		});
+   	</script> 
+   </head>
+
+  	<body>
+    	<div class="container main-content" ng-controller="contactFormCtrl">
+		<form ng-submit="onSubmit(myForm.$valid)" name="myForm" novalidate="novalidate">
+	  		<div class="form-group">
+	    		<input type="text" class="form-control" id="name" ng-model="formModel.name" placeholder="Name (Required)" ng-pattern="/^[A-Za-z0-9_]{1,32}$/" ng-minlength="7" ng-pattern-err-type="badName"  >
+	  		</div>
+
+	  		<div class="form-group">
+	    		<input type="text" class="form-control" id="email" ng-model="formModel.email" placeholder="Email (Required)" required="required">
+	    		<p class="help-block" ng-show="myForm.email.$error.required"></p>
+	    		<p class="help-block" ng-show="myForm.email.$error.email"></p>
+	    	</div>
+	    	
+	    	<div class="form-group" ng-class="{'has-error':!myForm.email.$valid && !myForm.$pristine, 'has-success':myForm.email.$valid && !myForm.$pristine}">
+	    		<button class="btn btn-primary" ng-click="onSubmit()"> Send Message</button>
+	    	</div>
+	  	</form>
+		</div>
+		
+	</body>
+</html>
