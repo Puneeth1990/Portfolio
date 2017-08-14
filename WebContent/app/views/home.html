@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,645 +41,14 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
 	
-    
     <script>
-    jQuery(document).ready(function ($) {
-        document.body.addEventListener('touchstart', function () { }, false);
-
-        /*  MOBILE CHECK */
-        if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-            $(window).stellar({
-                horizontalScrolling: false,
-                responsive: true,
-            });
-        }
-
-        /* HEADER SLIDESHOW*/
-        if ($("body").length) {
-            $("body").backstretch([
-    			"img/backgroundHome.jpg",
-    			"img/backgroundHome.jpg"
-            ], { duration: 3000, fade: 750 });
-        }
-
-        /*NAVBAR*/
-        $('.navbar').sticky({
-            topSpacing: 0,
-        });
-
-        $('body').scrollspy({
-            target: '.navbar-default',
-            offset: $('.navbar').outerHeight(),
-        });
-
-        /* COLLAPSE NAVIGATION ON CLICK*/
-        $(".navbar-nav li a").click(function (e) {
-            $('.navbar-toggle:visible').click();
-        });
-
-        /*  SCROLL TO*/
-        $(".navbar-nav li a, .scrollto").bind('click', function (e) {
-            var href = $(this).attr('href'),
-    			navHeight = $('.navbar').outerHeight() - 1,
-    			offset = $(href).offset().top;
-            if (href != '#') {
-                $('html,body').animate({ scrollTop: offset - navHeight }, 1500, 'easeInOutExpo');
-            }
-            e.preventDefault();
-        });
-
-        /*  SCROLL TO TOP*/
-        $(window).scroll(function () {
-            var position = $(this).scrollTop(),
-    			windowHeight = $(this).height();
-            if (position >= windowHeight - 100) {
-                $('.scroll-to-top').fadeIn();
-            } else {
-                $('.scroll-to-top').fadeOut();
-            }
-        });
-
-        $(".scroll-to-top, .navbar-brand").click(function (e) {
-            e.preventDefault();
-            $('html, body').animate({ scrollTop: 0 }, 1500, 'easeInOutExpo');
-        });
-
-        /* ISOTOPE PORTFOLIO*/
-        var $container = $("#portfolio-container");
-        $container.imagesLoaded(function () {
-            $container.isotope({
-                itemSelector: ".item",
-                layoutMode: "fitRows",
-                transitionDuration: "0.8s",
-            });
-        });
-
-        var $filter = $(".portfolio-filters a");
-        $filter.on("click", function () {
-            if ($filter.parent().hasClass("active")) {
-                $filter.parent().removeClass("active");
-                $(this).parent().addClass("active");
-            }
-            var filterValue = $(this).attr("data-filter");
-            $container.isotope({ filter: filterValue });
-            return false;
-        });
-
-        /* PORTFOLIO POPUP*/
-        /*UCB*/
-        $('#UCB').each(function () {
-            $(this).magnificPopup({
-                delegate: '.UCB_gallery',
-                type: 'image',
-                gallery: {
-                    enabled: true
-                }
-            });
-        });
-
-        /*doodle*/
-        $('#doodle').each(function () {
-            $(this).magnificPopup({
-                delegate: '.doodle_gallery',
-                type: 'image',
-                gallery: {
-                    enabled: true
-                }
-            });
-        });
-
-        /*tradeit*/
-        $('#tradeit').each(function () {
-            $(this).magnificPopup({
-                delegate: '.tradeit_gallery',
-                type: 'image',
-                gallery: {
-                    enabled: true
-                }
-            });
-        });
-
-        /*sap1*/
-        $('#sap1').each(function () {
-            $(this).magnificPopup({
-                delegate: '.sap1_gallery',
-                type: 'image',
-                gallery: {
-                    enabled: true
-                }
-            });
-        });
-
-        /*hcpday*/
-        $('#hcpday').each(function () {
-            $(this).magnificPopup({
-                delegate: '.hcpday_gallery',
-                type: 'image',
-                gallery: {
-                    enabled: true
-                }
-            });
-        });
-
-        /*student help website*/
-        $('#stuhelp').each(function () {
-            $(this).magnificPopup({
-                delegate: '.studenthelp_gallery',
-                type: 'image',
-                gallery: {
-                    enabled: true
-                }
-            });
-        });
-
-        /*logos*/
-        $('#logos').each(function () {
-            $(this).magnificPopup({
-                delegate: '.logos_gallery',
-                type: 'image',
-                gallery: {
-                    enabled: true
-                }
-            });
-        });
-
-        /*net4 templates*/
-        $('#net4').each(function () {
-            $(this).magnificPopup({
-                delegate: '.net4design_gallery',
-                type: 'image',
-                gallery: {
-                    enabled: true
-                }
-            });
-        });
-
-        /*eApproval android*/
-        $('#eappandroid').each(function () {
-            $(this).magnificPopup({
-                delegate: '.eappandroid_gallery',
-                type: 'image',
-                gallery: {
-                    enabled: true
-                }
-            });
-        });
-
-        /*eApproval iPhone*/
-        $('#eappiphone').each(function () {
-            $(this).magnificPopup({
-                delegate: '.eappiphone_gallery',
-                type: 'image',
-                gallery: {
-                    enabled: true
-                }
-            });
-        });
-
-        /*jacket*/
-        $('#jacket').each(function () {
-            $(this).magnificPopup({
-                delegate: '.jacket_gallery',
-                type: 'image',
-                gallery: {
-                    enabled: true
-                }
-            });
-        });
-
-        /*digital*/
-        $('#digital').each(function () {
-            $(this).magnificPopup({
-                delegate: '.digital_gallery',
-                type: 'image',
-                gallery: {
-                    enabled: true
-                }
-            });
-        });
-
-        /*motion*/
-        $('#motion').each(function () {
-            $(this).magnificPopup({
-                delegate: '.motion_gallery',
-                type: 'image',
-                gallery: {
-                    enabled: true
-                }
-            });
-        });
-
-        /*PM tablet*/
-        $('#pmtablet').each(function () {
-            $(this).magnificPopup({
-                delegate: '.pmtablet_gallery',
-                type: 'image',
-                gallery: {
-                    enabled: true
-                }
-            });
-        });
-
-        /*PM iPad*/
-        $('#pmipad').each(function () {
-            $(this).magnificPopup({
-                delegate: '.pmipad_gallery',
-                type: 'image',
-                gallery: {
-                    enabled: true
-                }
-            });
-        });
-
-        /*Tatoo design*/
-        $('#tatoo').each(function () {
-            $(this).magnificPopup({
-                delegate: '.tatoo_gallery',
-                type: 'image',
-                gallery: {
-                    enabled: true
-                }
-            });
-        });
-
-        /*traffic experiment*/
-        $('#traffic').each(function () {
-            $(this).magnificPopup({
-                delegate: '.traffic_gallery',
-                type: 'image',
-                gallery: {
-                    enabled: true
-                }
-            });
-        });
-
-        /*typography*/
-        $('#typography').each(function () {
-            $(this).magnificPopup({
-                delegate: '.typography_gallery',
-                type: 'image',
-                gallery: {
-                    enabled: true
-                }
-            });
-        });
-
-        /*kitties4all*/
-        $('#kitties4all').each(function () {
-            $(this).magnificPopup({
-                delegate: '.kitties4all_gallery',
-                type: 'image',
-                gallery: {
-                    enabled: true
-                }
-            });
-        });
-        /*Scrapbook cover*/
-        /*MIT App Inventor*/
-        /*neu redesign*/
-        /*Book design*/
-
-        /* AJAX PORTFOLIO*/
-        var loader = $("#preview");
-        loader.before("<div id=\"scrolltopreview\"></div>");
-        loader.html("<a href=\"#\" class=\"close\">X</a><div id=\"preview-inner\"></div>");
-        $(".preview").on("click", function (e) {
-            e.preventDefault();
-            var toLoad = $(this).attr("href") + " #portfolio-content";
-            var container = $("#preview-inner");
-            loader.slideUp(function () {
-                container.load(toLoad, function () {
-                    $("html, body").animate({ scrollTop: $("#scrolltopreview").offset().top - 100 }, 500, function () {
-                        loader.slideDown();
-                    });
-                });
-            });
-        });
-        ///////////////////////////////////////////////////////////////////////////// for detailed view
-        $("#UCB").on("click", function (e) {
-            e.preventDefault();
-            var toLoad = "UCBDesign.html" + " #portfolio-content";
-            var container = $("#preview-inner");
-            loader.slideUp(function () {
-                container.load(toLoad, function () {
-                    $("html, body").animate({ scrollTop: $("#scrolltopreview").offset().top - 100 }, 500, function () {
-                        loader.slideDown();
-                    });
-                });
-            });
-        });
-        $("#sap2").on("click", function (e) {
-            e.preventDefault();
-            var toLoad = "auth/sap2.html" + " #portfolio-content";
-            var container = $("#preview-inner");
-            loader.slideUp(function () {
-                container.load(toLoad, function () {
-                    $("html, body").animate({ scrollTop: $("#scrolltopreview").offset().top - 100 }, 500, function () {
-                        loader.slideDown();
-                    });
-                });
-            });
-        });
-        $("#sap1").on("click", function (e) {
-            e.preventDefault();
-            var toLoad = "auth/sap1.html" + " #portfolio-content";
-            var container = $("#preview-inner");
-            loader.slideUp(function () {
-                container.load(toLoad, function () {
-                    $("html, body").animate({ scrollTop: $("#scrolltopreview").offset().top - 100 }, 500, function () {
-                        loader.slideDown();
-                    });
-                });
-            });
-        });
-        $("#hcpday").on("click", function (e) {
-            e.preventDefault();
-            var toLoad = "HCPDay.html" + " #portfolio-content";
-            var container = $("#preview-inner");
-            loader.slideUp(function () {
-                container.load(toLoad, function () {
-                    $("html, body").animate({ scrollTop: $("#scrolltopreview").offset().top - 100 }, 500, function () {
-                        loader.slideDown();
-                    });
-                });
-            });
-        });
-        $("#tradeit").on("click", function (e) {
-            e.preventDefault();
-            var toLoad = "TradeIt.html" + " #portfolio-content";
-            var container = $("#preview-inner");
-            loader.slideUp(function () {
-                container.load(toLoad, function () {
-                    $("html, body").animate({ scrollTop: $("#scrolltopreview").offset().top - 100 }, 500, function () {
-                        loader.slideDown();
-                    });
-                });
-            });
-        });
-        $("#yelp").on("click", function (e) {
-            e.preventDefault();
-            var toLoad = "yelp_redesign.html" + " #portfolio-content";
-            var container = $("#preview-inner");
-            loader.slideUp(function () {
-                container.load(toLoad, function () {
-                    $("html, body").animate({ scrollTop: $("#scrolltopreview").offset().top - 100 }, 500, function () {
-                        loader.slideDown();
-                    });
-                });
-            });
-        });
-        $("#stuhelp").on("click", function (e) {
-            e.preventDefault();
-            var toLoad = "StudentHelpWebsite.html" + " #portfolio-content";
-            var container = $("#preview-inner");
-            loader.slideUp(function () {
-                container.load(toLoad, function () {
-                    $("html, body").animate({ scrollTop: $("#scrolltopreview").offset().top - 100 }, 500, function () {
-                        loader.slideDown();
-                    });
-                });
-            });
-        });
-        $("#doodle").on("click", function (e) {
-            e.preventDefault();
-            var toLoad = "DoodleDesign.html" + " #portfolio-content";
-            var container = $("#preview-inner");
-            loader.slideUp(function () {
-                container.load(toLoad, function () {
-                    $("html, body").animate({ scrollTop: $("#scrolltopreview").offset().top - 100 }, 500, function () {
-                        loader.slideDown();
-                    });
-                });
-            });
-        });
-        $("#logos").on("click", function (e) {
-            e.preventDefault();
-            var toLoad = "Logos.html" + " #portfolio-content";
-            var container = $("#preview-inner");
-            loader.slideUp(function () {
-                container.load(toLoad, function () {
-                    $("html, body").animate({ scrollTop: $("#scrolltopreview").offset().top - 100 }, 500, function () {
-                        loader.slideDown();
-                    });
-                });
-            });
-        });
-        $("#eappandroid").on("click", function (e) {
-            e.preventDefault();
-            var toLoad = "eApprovalAndroid.html" + " #portfolio-content";
-            var container = $("#preview-inner");
-            loader.slideUp(function () {
-                container.load(toLoad, function () {
-                    $("html, body").animate({ scrollTop: $("#scrolltopreview").offset().top - 100 }, 500, function () {
-                        loader.slideDown();
-                    });
-                });
-            });
-        });
-        $("#eappiphone").on("click", function (e) {
-            e.preventDefault();
-            var toLoad = "eApprovalIphone.html" + " #portfolio-content";
-            var container = $("#preview-inner");
-            loader.slideUp(function () {
-                container.load(toLoad, function () {
-                    $("html, body").animate({ scrollTop: $("#scrolltopreview").offset().top - 100 }, 500, function () {
-                        loader.slideDown();
-                    });
-                });
-            });
-        });
-        $("#pmtablet").on("click", function (e) {
-            e.preventDefault();
-            var toLoad = "PMTablet.html" + " #portfolio-content";
-            var container = $("#preview-inner");
-            loader.slideUp(function () {
-                container.load(toLoad, function () {
-                    $("html, body").animate({ scrollTop: $("#scrolltopreview").offset().top - 100 }, 500, function () {
-                        loader.slideDown();
-                    });
-                });
-            });
-        });
-        $("#pmipad").on("click", function (e) {
-            e.preventDefault();
-            var toLoad = "PMiPad.html" + " #portfolio-content";
-            var container = $("#preview-inner");
-            loader.slideUp(function () {
-                container.load(toLoad, function () {
-                    $("html, body").animate({ scrollTop: $("#scrolltopreview").offset().top - 100 }, 500, function () {
-                        loader.slideDown();
-                    });
-                });
-            });
-        });
-        $("#tatoo").on("click", function (e) {
-            e.preventDefault();
-            var toLoad = "TatooDesign.html" + " #portfolio-content";
-            var container = $("#preview-inner");
-            loader.slideUp(function () {
-                container.load(toLoad, function () {
-                    $("html, body").animate({ scrollTop: $("#scrolltopreview").offset().top - 100 }, 500, function () {
-                        loader.slideDown();
-                    });
-                });
-            });
-        });
-        $("#kitties4all").on("click", function (e) {
-            e.preventDefault();
-            var toLoad = "Kitties4All.html" + " #portfolio-content";
-            var container = $("#preview-inner");
-            loader.slideUp(function () {
-                container.load(toLoad, function () {
-                    $("html, body").animate({ scrollTop: $("#scrolltopreview").offset().top - 100 }, 500, function () {
-                        loader.slideDown();
-                    });
-                });
-            });
-        });
-        $("#typography").on("click", function (e) {
-            e.preventDefault();
-            var toLoad = "Typography.html" + " #portfolio-content";
-            var container = $("#preview-inner");
-            loader.slideUp(function () {
-                container.load(toLoad, function () {
-                    $("html, body").animate({ scrollTop: $("#scrolltopreview").offset().top - 100 }, 500, function () {
-                        loader.slideDown();
-                    });
-                });
-            });
-        });
-        $("#net4").on("click", function (e) {
-            e.preventDefault();
-            var toLoad = "Net4Design.html" + " #portfolio-content";
-            var container = $("#preview-inner");
-            loader.slideUp(function () {
-                container.load(toLoad, function () {
-                    $("html, body").animate({ scrollTop: $("#scrolltopreview").offset().top - 100 }, 500, function () {
-                        loader.slideDown();
-                    });
-                });
-            });
-        });
-
-        ///////////////////////////////////////////////////////////////////////////////////////////////
-
-        $(".close").on("click", function (e) {
-            e.preventDefault();
-            loader.delay(300).slideUp(function () {
-                var container = $("#preview-inner");
-                container.html("");
-                $("html, body").animate({ scrollTop: $("#scrolltopreview").offset().top - 100 }, 500);
-            });
-        });
-
-        /* WOW INIT*/
-        wow = new WOW({
-            boxClass: 'wow',
-            animateClass: 'animated',
-            offset: 0,
-            mobile: false,
-        });
-        wow.init();
-
-        /*	SKILL KNOBS (Activate on waypoint) */
-        $('.skill').waypoint(function () {
-            $('.knob').each(function () {
-                var element = $(this);
-                var perc = element.attr("value");
-
-                element.knob({
-                    'value': 0,
-                    'min': 0,
-                    'max': 100,
-                    'width': 200,
-                    'readOnly': true,
-                    'thickness': .06,
-                    'font': 'inherit',
-                    'fontWeight': 'inherit',
-                    'inputColor': 'inherit',
-                    'dynamicDraw': true,
-                    'draw': function () {
-                        $(this.i).val(this.cv + '%');
-                    }
-                });
-
-                $({ value: 0 }).animate({ value: perc }, {
-                    duration: 3000,
-                    easing: 'swing',
-                    step: function () {
-                        element.val(Math.ceil(this.value)).trigger('change');
-                    }
-                });
-            });
-        }, { offset: '90%', triggerOnce: true });
-
-        /*	OWL CAROUSEL*/
-        // hobbies
-        $("#hobby-carousel").owlCarousel({
-            navigation: true,
-            navigationText: [
-    			"<i class=\"fa fa-angle-left\"></i>",
-    			"<i class=\"fa fa-angle-right\"></i>"
-            ],
-            pagination: false,
-            singleItem: true,
-            autoPlay: 10000
-        });
-
-        // workareas
-        $("#workarea-carousel").owlCarousel({
-            items: 5,
-            itemsDesktop: [1000, 2],
-            itemsDesktopSmall: [900, 2],
-            itemsTablet: [600, 1],
-            itemsMobile: [0, 1],
-            pagination: false,
-            autoPlay: 4000
-        });
-
-        /*	CONTACT FROM VALIDATION*/
-        $("#contactForm input, #contactForm textarea").jqBootstrapValidation({
-            preventSubmit: true,
-            submitSuccess: function ($form, e) {
-                e.preventDefault();
-                var name = $("#contactForm input[name='name']").val(),
-    			    email = $("#contactForm input[name='email']").val(),
-    			    subject = $("#contactForm input[name='subject']").val(),
-    			    message = $("#contactForm textarea[name='message']").val();
-                $.ajax({
-                    url: "././php/contact.php",
-                    type: "POST",
-                    data: {
-                        name: name,
-                        email: email,
-                        subject: subject,
-                        message: message
-                    },
-                    cache: false,
-                    success: function () {
-                        $('#contactForm .success').html("Your message has been sent!");
-                        $('#contactForm').trigger("reset");
-                    },
-                    error: function () {
-                        $('#contactForm .success').html("<span class=\"error\">Your message cannot be send. Please try again later!</span>");
-                        //$('#contactForm').trigger("reset");
-                    },
-                });
-            },
-            filter: function () {
-                return $(this).is(":visible");
-            },
-        });
-    });
-
     $(window).load(function() {
         $(".loader").fadeOut("slow");
     })
 
     </script>
-    
     <style>
-    /* GENERAL
+    	/* GENERAL
 ============================================================= */
 ::-moz-selection {
     background: #E74C3C;
@@ -759,8 +129,8 @@ a {
     .btn.btn-default:hover {
         background-color: #5b6770;
     }
-
-/* SECTIONS
+    	
+    /* SECTIONS
 ============================================================== */
 .section {
     padding-top: 50px;
@@ -810,50 +180,8 @@ a {
     .bg-dark .section-title .line {
         background-color: white;
     }
-
-/* /* ICONS
-============================================================== */
-.rounded-icon {
-    display: block;
-    width: 50px;
-    height: 50px;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-    font-size: 20px;
-    line-height: 46px;
-    text-align: center;
-    -moz-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    color: #E74C3C;
-    border: solid 2px #E74C3C;
-    background-color: transparent;
-    text-decoration: none;
-}
-
-    .rounded-icon:hover, .rounded-icon:focus, .rounded-icon:active {
-        color: white;
-        background-color: #E74C3C;
-    }
-
-.bg-dark .rounded-icon,
-.overlay .rounded-icon {
-    color: white;
-    border-color: white;
-    background-color: transparent;
-}
-
-    .bg-dark .rounded-icon:hover, .bg-dark .rounded-icon:focus, .bg-dark .rounded-icon:active,
-    .overlay .rounded-icon:hover,
-    .overlay .rounded-icon:focus,
-    .overlay .rounded-icon:active {
-        color: #E74C3C;
-        background-color: white;
-    }
- */
-/* PAGE HEADER
+    
+    /* PAGE HEADER
 ============================================================== */
 .header-fullscreen {
     position: relative;
@@ -888,7 +216,7 @@ a {
         right: 0;
         bottom: 0;
         left: 0;
-        background: url("../img/overlay-pattern.png") repeat 0 0 scroll rgba(231, 76, 60, 0.6);
+        background: url("../images/IMG-01.jpg") repeat 0 0 scroll rgba(175, 22, 6, 0.66);
     }
 
     .header-fullscreen .center_text {
@@ -1077,359 +405,7 @@ a {
     background-color: #E74C3C;
 }
 
-/* PORTFOLIO
-============================================================== */
-.portfolio-filters {
-    margin-bottom: 40px;
-    text-align: center;
-}
-
-    .portfolio-filters .nav-pills {
-        display: inline-block;
-    }
-
-        .portfolio-filters .nav-pills > li + li {
-            margin-left: 0;
-        }
-
-        .portfolio-filters .nav-pills > li {
-            display: inline;
-            margin-right: 5px;
-            margin-bottom: 5px;
-        }
-
-            .portfolio-filters .nav-pills > li a {
-                font-weight: 400;
-                color: #E74C3C;
-                text-transform: uppercase;
-                border: solid 2px #E74C3C;
-                -moz-border-radius: 0;
-                -webkit-border-radius: 0;
-                border-radius: 0;
-                -moz-transition: all 0.3s ease-in-out;
-                -o-transition: all 0.3s ease-in-out;
-                -webkit-transition: all 0.3s ease-in-out;
-                transition: all 0.3s ease-in-out;
-            }
-
-                .portfolio-filters .nav-pills > li a:hover, .portfolio-filters .nav-pills > li a:focus {
-                    color: #fff;
-                    background-color: #E74C3C;
-                }
-
-            .portfolio-filters .nav-pills > li.active > a, .portfolio-filters .nav-pills > li.active > a:hover, .portfolio-filters .nav-pills > li.active > a:focus {
-                color: #fff;
-                background-color: #E74C3C;
-            }
-
-#portfolio-container {
-    -moz-transition: all 0.8s ease-in-out;
-    -o-transition: all 0.8s ease-in-out;
-    -webkit-transition: all 0.8s ease-in-out;
-    transition: all 0.8s ease-in-out;
-}
-
-.portfolio-item {
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-    margin-bottom: 10px;
-    color: #fff;
-    text-align: center;
-}
-
-    .portfolio-item .overlay {
-        display: block;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background-color: rgba(255, 202, 55, 0);
-        -moz-transition: all 0.3s ease-in-out;
-        -o-transition: all 0.3s ease-in-out;
-        -webkit-transition: all 0.3s ease-in-out;
-        transition: all 0.3s ease-in-out;
-    }
-
-    .portfolio-item:hover .overlay, .portfolio-item:focus .overlay {
-        background-color: rgba(231, 76, 60, 0.8);
-    }
-
-    .portfolio-item img {
-        width: 100%;
-        height: 220px;
-        -moz-transition: all 0.5s ease-in-out;
-        -o-transition: all 0.5s ease-in-out;
-        -webkit-transition: all 0.5s ease-in-out;
-        transition: all 0.5s ease-in-out;
-        -moz-transform: scale(1);
-        -ms-transform: scale(1);
-        -webkit-transform: scale(1);
-        transform: scale(1);
-    }
-
-    .portfolio-item:hover img, .portfolio-item:focus img {
-        -moz-transform: scale(1.2);
-        -ms-transform: scale(1.2);
-        -webkit-transform: scale(1.2);
-        transform: scale(1.2);
-    }
-
-    .portfolio-item .line {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 2px;
-        height: 0;
-        background-color: white;
-        -moz-transition: all 0.3s ease-in-out;
-        -o-transition: all 0.3s ease-in-out;
-        -webkit-transition: all 0.3s ease-in-out;
-        transition: all 0.3s ease-in-out;
-    }
-
-    .portfolio-item:hover .line, .portfolio-item:focus .line {
-        height: 80px;
-        margin-top: -40px;
-    }
-
-    .portfolio-item .icon-search, .portfolio-item .icon-link {
-        display: block;
-        position: absolute;
-        top: 50%;
-        margin-top: -25px;
-        outline: 0;
-        -moz-transition: all 0.3s ease-in-out;
-        -o-transition: all 0.3s ease-in-out;
-        -webkit-transition: all 0.3s ease-in-out;
-        transition: all 0.3s ease-in-out;
-    }
-
-    .portfolio-item .icon-search {
-        left: 0;
-        margin-left: -80px;
-    }
-
-    .portfolio-item:hover .icon-search, .portfolio-item:focus .icon-search {
-        left: 50%;
-    }
-
-    .portfolio-item .icon-link {
-        right: 0;
-        margin-right: -80px;
-    }
-
-    .portfolio-item:hover .icon-link, .portfolio-item:focus .icon-link {
-        right: 50%;
-    }
-
-#preview {
-    display: none;
-}
-
-    #preview .close {
-        display: block;
-        float: none;
-        margin-bottom: 20px;
-        text-align: center;
-        font-size: 30px;
-        font-weight: 600;
-        color: inherit;
-        filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
-        opacity: 1;
-    }
-
-    #preview #preview-inner {
-        margin-bottom: 60px;
-    }
-
-/* Single Portfolio */
-
-#navigation {
-    text-align: center;
-}
-
-.project-title {
-    margin-bottom: 40px;
-    text-align: center;
-}
-
-.project-about {
-    line-height: 2.0;
-}
-
-.project-title h3 {
-    margin-bottom: 15px;
-}
-
-.project-title .line {
-    display: inline-block;
-    margin-bottom: 15px;
-    width: 100px;
-    height: 5px;
-    background-color: #E74C3C;
-    -moz-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-}
-
-.project-title:hover .line, .project-title:focus .line {
-    width: 50px;
-}
-
-.project-title p {
-    margin: 0;
-}
-
-.project-details {
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
-    .project-details ul {
-        padding: 0;
-        list-style: none;
-    }
-
-        .project-details ul li {
-            padding: 8px 0;
-            border-bottom: 1px dotted #E5E5E5;
-        }
-
-.center_title {
-    text-align: center;
-}
-
-.details {
-    padding: 18px 20% 0;
-    position: relative;
-    font-style: italic;
-    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 18px;
-    line-height: 2.0em;
-    letter-spacing: 0px;
-    text-align: center;
-    font-weight: 300;
-    font-style: normal;
-}
-
-.details-UCB {
-    padding: 18px 10% 0;
-    position: relative;
-    font-style: italic;
-    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    color: #6b6b6b;
-    font-size: 18px;
-    line-height: 2.0em;
-    letter-spacing: 0.5px;
-    text-align: center;
-    font-weight: 300;
-    font-style: normal;
-}
-
-.details-UCB-title {
-    padding-left: 5%;
-    padding-right: 5%;
-}
-
-.details_expanded {
-    padding-top: 5%;
-    position: relative;
-    font-style: italic;
-    font-family: "Lato";
-    font-size: 18px;
-    line-height: 2.0em;
-    letter-spacing: 0px;
-    text-align: center;
-    font-weight: 300;
-    font-style: normal;
-}
-
-
-p.details_expanded > img {
-    padding-right: 5%;
-    line-height: 2.0em;
-    letter-spacing: 0px;
-    text-align: center;
-    height: 25%;
-    width: 25%;
-}
-
-.single-portfolio-item {
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-    margin-bottom: 30px;
-    color: #fff;
-    text-align: center;
-}
-
-    .single-portfolio-item .overlay {
-        display: block;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background-color: rgba(255, 202, 55, 0);
-        -moz-transition: all 0.3s ease-in-out;
-        -o-transition: all 0.3s ease-in-out;
-        -webkit-transition: all 0.3s ease-in-out;
-        transition: all 0.3s ease-in-out;
-    }
-
-    .single-portfolio-item:hover .overlay, .single-portfolio-item:focus .overlay {
-        background-color: rgba(231, 76, 60, 0.8);
-    }
-
-    .single-portfolio-item img {
-        width: 100%;
-        height: auto;
-        -moz-transition: all 0.5s ease-in-out;
-        -o-transition: all 0.5s ease-in-out;
-        -webkit-transition: all 0.5s ease-in-out;
-        transition: all 0.5s ease-in-out;
-        -moz-transform: scale(1);
-        -ms-transform: scale(1);
-        -webkit-transform: scale(1);
-        transform: scale(1);
-    }
-
-    .single-portfolio-item:hover img, .single-portfolio-item:focus img {
-        -moz-transform: scale(1.2);
-        -ms-transform: scale(1.2);
-        -webkit-transform: scale(1.2);
-        transform: scale(1.2);
-    }
-
-    .single-portfolio-item .icon-link {
-        display: block;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        margin-left: -25px;
-        margin-top: -25px;
-        outline: 0;
-        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-        opacity: 0;
-        -moz-transition: all 0.3s ease-in-out 0.1s;
-        -o-transition: all 0.3s ease-in-out 0.1s;
-        -webkit-transition: all 0.3s ease-in-out;
-        -webkit-transition-delay: 0.1s;
-        transition: all 0.3s ease-in-out 0.1s;
-    }
-
-    .single-portfolio-item:hover .icon-link, .single-portfolio-item:focus .icon-link {
-        filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
-        opacity: 1;
-    }
-
+    
 /* SERVICES
 ============================================================== */
 .service {
@@ -1506,8 +482,9 @@ p.details_expanded > img {
     .service p {
         margin: 0;
     }
-
-/* SKILL KNOBS
+    
+    
+    /* SKILL KNOBS
 ============================================================= */
 .skill {
     text-align: center;
@@ -1528,128 +505,9 @@ p.details_expanded > img {
         padding-bottom: 90px;
         font-size: 15px;
     }
-
-/* HOBBIES */
-.hobbies blockquote {
-    border: 0;
-    font-size: 16px;
-    font-style: italic;
-    line-height: 30px;
-    text-align: center;
-    padding: 0;
-    margin: 0;
-}
-
-    .hobbies blockquote p {
-        padding: 30px 0;
-    }
-
-    .hobbies blockquote cite {
-        font-weight: 700;
-        display: block;
-    }
-
-/* Team
-============================================================= */
-.member {
-    color: #5b6770;
-}
-
-    .member .member-image {
-        position: relative;
-        overflow: hidden;
-    }
-
-        .member .member-image img {
-            width: 100%;
-            height: auto;
-            -moz-transition: all 0.5s ease-in-out;
-            -o-transition: all 0.5s ease-in-out;
-            -webkit-transition: all 0.5s ease-in-out;
-            transition: all 0.5s ease-in-out;
-            -moz-transform: scale(1);
-            -ms-transform: scale(1);
-            -webkit-transform: scale(1);
-            transform: scale(1);
-        }
-
-        .member .member-image:hover img, .member .member-image:focus img {
-            -moz-transform: scale(1.2);
-            -ms-transform: scale(1.2);
-            -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-        }
-
-        .member .member-image .overlay {
-            display: block;
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            background-color: rgba(255, 202, 55, 0);
-            -moz-transition: all 0.3s ease-in-out;
-            -o-transition: all 0.3s ease-in-out;
-            -webkit-transition: all 0.3s ease-in-out;
-            transition: all 0.3s ease-in-out;
-        }
-
-        .member .member-image:hover .overlay, .member .member-image:focus .overlay {
-            background-color: rgba(231, 76, 60, 0.8);
-        }
-
-        .member .member-image .social-links {
-            display: block;
-            position: absolute;
-            width: 100%;
-            top: 0;
-            margin-top: -80px;
-            -moz-transition: all 0.3s ease-in-out;
-            -o-transition: all 0.3s ease-in-out;
-            -webkit-transition: all 0.3s ease-in-out;
-            transition: all 0.3s ease-in-out;
-        }
-
-        .member .member-image:hover .social-links, .member .member-image:focus .social-links {
-            top: 50%;
-            margin-top: -25px;
-        }
-
-    .member .member-details {
-        background-color: #F3F3F3;
-        padding: 20px 15px;
-    }
-
-        .member .member-details h4 {
-            color: #5b6770;
-            margin-bottom: 15px;
-        }
-
-/* TWITTER FEED
-============================================================= */
-.tweets {
-    margin-top: 50px;
-    list-style: none outside none;
-    padding-left: 0px;
-    text-align: center;
-}
-
-    .tweets .tweet {
-        margin-bottom: 25px;
-    }
-
-        .tweets .tweet > a:hover, .tweets .tweet > a:focus {
-            color: #E74C3C;
-        }
-
-    .tweets .timePosted {
-        margin: 0;
-        color: #E74C3C;
-    }
-
-/* PRICING TABLE
+    
+    
+    /* PRICING TABLE
 ============================================================= */
 .table_container [class*="col"] {
     padding-left: 0 !important;
@@ -1718,112 +576,9 @@ p.details_expanded > img {
         .my_table.active .header {
             background-color: #E74C3C;
         }
-
-/* workareas
-============================================================= */
-.workareas {
-    padding: 60px 0;
-}
-
-    .workareas .workarea {
-        padding: 20px 0;
-        border-right: solid 1px #E5E5E5;
-    }
-
-        .workareas .workarea img {
-            display: block;
-            margin: 0 auto;
-            filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
-            opacity: 1;
-            -moz-transition: all 0.3s ease-in-out;
-            -o-transition: all 0.3s ease-in-out;
-            -webkit-transition: all 0.3s ease-in-out;
-            transition: all 0.3s ease-in-out;
-        }
-
-        .workareas .workarea:hover img {
-            filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
-            opacity: 0.5;
-        }
-
-/* GOOGLE MAP
-============================================================= */
-#googleMap {
-    height: 400px;
-}
-
-/* CONTACT
-============================================================= */
-.contact {
-    margin-bottom: 60px;
-    text-align: center;
-}
-
-    .contact .icon {
-        margin-bottom: 15px;
-        font-size: 50px;
-        color: #E74C3C;
-    }
-
-.form-control {
-    margin-bottom: 15px;
-    padding: 20px 15px;
-    border: solid 1px #E5E5E5;
-    -moz-border-radius: 0;
-    -webkit-border-radius: 0;
-    border-radius: 0;
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
-
-    .form-control:focus {
-        border-color: #E5E5E5;
-        outline: 0;
-        -moz-box-shadow: none;
-        -webkit-box-shadow: none;
-        box-shadow: none;
-    }
-
-.help-block ul {
-    margin-bottom: 15px;
-    padding-left: 20px;
-    list-style: none;
-    color: #D9534F;
-}
-
-.success {
-    margin-bottom: 15px;
-    color: #5CB85C;
-}
-
-    .success .error {
-        color: #D9534F;
-    }
-
-#contactForm textarea {
-    resize: none;
-}
-
-hr {
-    margin-top: 40px;
-    margin-bottom: 40px;
-    border-color: #E5E5E5;
-}
-
-.inner-left {
-    padding-left: 40px;
-}
-
-.inner-right {
-    padding-right: 40px;
-}
-
-.border-right {
-    border-right: 1px solid #E5E5E5;
-}
-
-/* FOOTER
+        
+        
+        /* FOOTER
 ============================================================= */
 .page-footer {
     padding: 80px 0 40px 0;
@@ -1832,36 +587,10 @@ hr {
     .page-footer .copyrights {
         padding-top: 40px;
     }
-
-/* SCROLL TO TOP
-============================================================= */
-.scroll-to-top {
-    display: none;
-    z-index: 1000;
-    position: fixed;
-    bottom: 15px;
-    right: 15px;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
-    opacity: 0.5;
-    background-color: #5b6770;
-    font-size: 19px;
-    color: #FFFFFF;
-    text-align: center;
-}
-
-    .scroll-to-top:hover, .scroll-to-top:focus {
-        filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
-        opacity: 1;
-        color: #FFFFFF;
-    }
-
-/* MEDIA QUERIES
+    
+    
+    
+    /* MEDIA QUERIES
 ============================================================== */
 @media (min-width: 768px) and (max-width: 979px) {
     .header-fullscreen h1 {
@@ -1957,6 +686,8 @@ hr {
         font-size: 0.9em;
     }
 }
+
+
 /* COLOR SWITCHER
 ============================================================= */
 .color-switcher {
@@ -2194,7 +925,7 @@ h2, h3, h4 {
     letter-spacing: 3px;
 }
 
-.loader {
+ .loader {
     position: fixed;
     left: 0px;
     top: 0px;
@@ -2202,7 +933,288 @@ h2, h3, h4 {
     height: 100%;
     z-index: 9999;
     background: url('http://www.beckett.com/images/loading-circle-orange.gif') 50% 50% no-repeat rgb(249,249,249);
-}    </style>
+} 
+        
+        /* CONTACT
+============================================================= */
+.contact {
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+    .contact .icon {
+        margin-bottom: 15px;
+        font-size: 50px;
+        color: #E74C3C;
+    }
+
+.form-control {
+    margin-bottom: 15px;
+    padding: 20px 15px;
+    border: solid 1px #E5E5E5;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+    .form-control:focus {
+        border-color: #E5E5E5;
+        outline: 0;
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+.help-block ul {
+    margin-bottom: 15px;
+    padding-left: 20px;
+    list-style: none;
+    color: #D9534F;
+}
+
+.success {
+    margin-bottom: 15px;
+    color: #5CB85C;
+}
+
+    .success .error {
+        color: #D9534F;
+    }
+
+#contactForm textarea {
+    resize: none;
+}
+
+hr {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border-color: #E5E5E5;
+}
+
+.inner-left {
+    padding-left: 40px;
+}
+
+.inner-right {
+    padding-right: 40px;
+}
+
+.border-right {
+    border-right: 1px solid #E5E5E5;
+}		
+
+
+/* Team
+============================================================= */
+.member {
+    color: #5b6770;
+}
+
+    .member .member-image {
+        position: relative;
+        overflow: hidden;
+    }
+
+        .member .member-image img {
+            width: 100%;
+            height: auto;
+            -moz-transition: all 0.5s ease-in-out;
+            -o-transition: all 0.5s ease-in-out;
+            -webkit-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+            -moz-transform: scale(1);
+            -ms-transform: scale(1);
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+
+        .member .member-image:hover img, .member .member-image:focus img {
+            -moz-transform: scale(1.2);
+            -ms-transform: scale(1.2);
+            -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+        }
+
+        .member .member-image .overlay {
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(255, 202, 55, 0);
+            -moz-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            -webkit-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .member .member-image:hover .overlay, .member .member-image:focus .overlay {
+            background-color: rgba(231, 76, 60, 0.8);
+        }
+
+        .member .member-image .social-links {
+            display: block;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            margin-top: -80px;
+            -moz-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            -webkit-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .member .member-image:hover .social-links, .member .member-image:focus .social-links {
+            top: 50%;
+            margin-top: -25px;
+        }
+
+    .member .member-details {
+        background-color: #F3F3F3;
+        padding: 20px 15px;
+    }
+
+        .member .member-details h4 {
+            color: #5b6770;
+            margin-bottom: 15px;
+        }
+        
+        
+        
+        
+        
+        
+
+		.rounded-icon 
+		{
+    		display: block;
+    		width: 50px;
+    		height: 50px;
+    		-moz-border-radius: 50%;
+    		-webkit-border-radius: 50%;
+    		border-radius: 50%;
+    		font-size: 20px;
+    		line-height: 46px;
+    		text-align: center;
+    		-moz-transition: all 0.3s ease-in-out;
+    		-o-transition: all 0.3s ease-in-out;
+    		-webkit-transition: all 0.3s ease-in-out;
+    		transition: all 0.3s ease-in-out;
+    		color: #FFFFFF;
+    		border: solid 2px #FFFFFF;
+    		background-color: transparent;
+    		text-decoration: none;
+		}
+.chart {
+  color: #999;
+  font-size: 20px;
+  display:inline-block;
+}
+
+.chart img {
+  max-width: 100px;
+  max-height: 100px;
+}
+/* END Container styles */
+
+/* Colors for the circles and positions for the graphics */
+.html {
+  top: 50px;
+  left: 45px;
+}
+
+.html + svg .outer {
+  stroke: #e34f26;
+}
+
+.css {
+  top: 55px;
+  left: 48px;
+}
+
+.css + svg .outer {
+  stroke: #0d84ce;
+}
+
+.javascript {
+  max-width: 90px;
+  max-height: 90px;
+  top: 45px;
+  left: 45px;
+}
+
+.javascript + svg .outer {
+  stroke: #f0e040;
+}
+
+.node {
+  width: 200px;
+  height: 200px;
+  top: 45px;
+  left: 45px;
+}
+
+.node + svg .outer {
+  stroke: #83cd29;
+}
+
+.chart svg {
+  top: 0;
+  left: 0;
+}
+
+.outer {
+  fill: transparent;
+  stroke: #E74C3C;
+  stroke-width: 6;
+  stroke-dasharray: 650;
+  transition: stroke-dashoffset 1s;
+  -webkit-animation-play-state: running;
+  
+  /* firefox bug fix - won't rotate at 90deg angles */
+  -moz-transform: rotate(-89deg) translateX(-190px);
+}
+
+.chart:hover .outer {
+  stroke-dashoffset: 750 !important;
+  -webkit-animation-play-state: stop;
+}
+
+.chart[data-percent='95'] .outer {
+  stroke-dashoffset: 133;
+  -webkit-animation: show95 2s;
+  animation: show95 2s;
+}
+
+@-webkit-keyframes show95 {
+  from {
+    stroke-dashoffset: 750;
+  }
+  
+  to {
+    stroke-dashoffset: 134;
+  }
+}
+#home
+@keyframes show95 {
+  from {
+    stroke-dashoffset: 537;
+  }
+  
+  to {
+    stroke-dashoffset: 124;
+  }
+}
+
+
+
+    </style>
     
 </head>
 <body>
@@ -2261,11 +1273,12 @@ h2, h3, h4 {
         <!--More-->
         <a href="#about" class="scrollto" title="View more">
             <div id="more_header" class="text-center">
-                <span class="circle">
-                    <i class="fa fa-angle-down fa-2x rounded-icon" style="margin-left:660px;color:white;"></i>
+                <span>
+                    <i class="fa fa-angle-down fa-2x" style="padding-top:6px;"></i>
                 </span>
             </div>
         </a>
+
     </header>
 	<!-- Header -->		
 
@@ -3145,54 +2158,51 @@ h2, h3, h4 {
                 </div>
             </div>
 
-            <div class="row table_container" style="padding-top:40px;">
+            <div class="row table_container">
                 <div class="col-sm-4">
                     <ul class="my_table wow fadeInUp" data-wow-delay=".3s">
-                        <li class="price" style="list-style-type: none;height:67px;padding-top:10px;">Skills</li>
-                        <li style="list-style-type: none;">HTML, CSS & JS</li>
-                        <li style="list-style-type: none;">Bootstrap & Responsive Design</li>
-                        <li style="list-style-type: none;">Interaction Design</li>
-                        <li style="list-style-type: none;">Visual Design</li>
-                        <li style="list-style-type: none;">Wireframing & Prototyping</li>
-                        <li style="list-style-type: none;">User Research & Usability Testing</li>
-                        <li class="footer" style="list-style-type: none;background-color:#E74C3C;height:67px;padding-top:10px;">
-                        	<a href="#" class="btn btn-default">UI & UX</a>
-                        </li>
+                        <li class="price">Skills</li>
+                        <li>HTML, CSS & JS</li>
+                        <li>Bootstrap & Responsive Design</li>
+                        <li>Interaction Design</li>
+                        <li>Visual Design</li>
+                        <li>Wireframing & Prototyping</li>
+                        <li>User Research & Usability Testing</li>
+                        <li class="footer"><a href="#" class="btn btn-default">UI & UX</a></li>
                     </ul>
                 </div>
 
-                <div class="col-sm-4" style="padding-top:20px;">
+                <div class="col-sm-4">
                     <ul class="my_table active wow fadeInUp" data-wow-delay=".6s">
-                        <li class="price" style="background-color: #E74C3C;list-style-type: none;height:67px;padding-top:10px;">Work Experience</li>
-                        <li style="list-style-type: none;">Intel, CA, USA</li>
-                        <li style="list-style-type: none;">AT&T, TX, USA</li>
-                        <li style="list-style-type: none;">iGATE Global Solutions, India</li>
-                        <li style="list-style-type: none;">Member of NIE, MYS, IND</li>
-                        <li style="list-style-type: none;">Member of UHUX, TX, USA</li>
-                        <li class="footer" style="list-style-type: none;background-color:#E74C3C;height:67px;padding-top:10px;">
-                        	<a href="#" class="btn btn-default">Full time & Internships</a>
-                        </li>
+                        <li class="price" style="background-color: #E74C3C;">Work Experience</li>
+                        <li>Intel, CA, USA</li>
+                        <li>AT&T, NY, USA</li>
+                        <li>iGATE Global Solutions Limited, India</li>
+                        <li>Member of SCOUT NIE, KA, IND</li>
+                        <li>Member of UHUX Houston, TX, USA</li>
+                        <li>Member of UHUI Houston, TX, USA</li>
+                        <li>Member of UHUIUX Houston, TX, USA</li>
+                        <li class="footer"><a href="#" class="btn btn-default">Full time & Internships</a></li>
                     </ul>
                 </div>
 
                 <div class="col-sm-4">
                     <ul class="my_table wow fadeInUp" data-wow-delay=".9s">
-                        <li class="price" style="list-style-type: none;height:67px;padding-top:10px;">Tools</li>
-                        <li style="list-style-type: none;">Keynote</li>
-                        <li style="list-style-type: none;">Adobe CC, Sketch, Omnigraffle</li>
-                        <li style="list-style-type: none;">Axure, Framer, Invision</li>
-                        <li style="list-style-type: none;">Quartz Composer</li>
-                        <li style="list-style-type: none;">Pencil & Paper, Keynotes</li>
-                        <li style="list-style-type: none;">Marvel, Balsamiq, UXPIN</li>
-                        <li class="footer" style="list-style-type: none;background-color:#E74C3C;height:67px;padding-top:10px;">
-                        	<a href="#" class="btn btn-default">Brainstorming & UI Design</a>
-                        </li>
+                        <li class="price">Tools</li>
+                        <li>Keynote</li>
+                        <li>Adobe CC, Sketch, Omnigraffle</li>
+                        <li>Axure, Framer, Invision</li>
+                        <li>Quartz Composer</li>
+                        <li>Pencil & Paper, Keynotes</li>
+                        <li>Marvel, Balsamiq, UXPIN</li>
+                        <li class="footer"><a href="#" class="btn btn-default">Brainstorming & UI Design</a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
     <!--extra table-->
+
 
     <!--Contact me-->
     <section id="contact" class="section">
@@ -3205,29 +2215,29 @@ h2, h3, h4 {
                 </div>
             </div>
 
-            <div class="row" style="padding-top:40px;">
+            <div class="row">
                 <div class="col-sm-4 contact wow bounceIn" data-wow-delay=".3s">
-                    <div class="icon" style="padding-left:115px;">
-                        <i class="fa fa-envelope fa-3x" style="color:#E74C3C;" ></i>
+                    <div class="icon">
+                        <i class="fa fa-envelope"></i>
                     </div>
-                    <address style="padding-top:25px;padding-left:50px;">
-                        <a href="mailto:#" style="text-decoration:none;color:black;">puneethsrikanta@gmail.com</a><br>
-                        <a href="mailto:#" style="text-decoration:none;color:black;">srikantax.puneeth@intel.com</a>
+                    <address>
+                        <a href="mailto:#">puneethsrikanta@gmail.com</a><br>
+                        <a href="mailto:#">puneethx.srikanta@intel.com</a>
                     </address>
                 </div>
                 <div class="col-sm-4 contact wow bounceIn" data-wow-delay=".6s">
-                    <div class="icon" style="padding-left:140px;">
-                        <i class="fa fa-phone fa-3x" style="color:#E74C3C;"></i>
+                    <div class="icon">
+                        <i class="fa fa-phone"></i>
                     </div>
-                    <address style="padding-top:25px;padding-left:115px;">
+                    <address>
                         +1 832-808-8862
                     </address>
                 </div>
                 <div class="col-sm-4 contact wow bounceIn" data-wow-delay=".9s">
-                    <div class="icon" style="padding-left:85px;">
-                        <i class="fa fa-map-marker fa-3x" style="color:#E74C3C;"></i>
+                    <div class="icon">
+                        <i class="fa fa-map-marker"></i>
                     </div>
-                    <address style="padding-top:25px;padding-left:65px;">
+                    <address>
                         San Jose<br>
                         CA - 95110, United States
 				
@@ -3239,15 +2249,24 @@ h2, h3, h4 {
                 <div class="col-sm-6 inner-right border-right wow fadeInLeft" data-wow-delay=".3s">
                     <h3>Leave a Message</h3>
                     <form name="contactForm" action="contact.php" method="POST" id="contactForm" novalidate>
-                        <div class="control-group">
+                        <div class="control-group error">
                             <div class="controls">
                                 <input type="text" class="form-control" name="name" placeholder="Name (Required)" required data-validation-required-message="Please enter your name.">
-                                <p class="help-block"></p>
+                                <div class="help-block">
+                            		<ul role="alert">
+                            			<li>Please enter your name.</li>
+                            		</ul>
+                            	</div>
                             </div>
                         </div>
-                        <div class="control-group">
+                        <div class="control-group error">
                             <div class="controls">
                                 <input type="email" class="form-control" name="email" placeholder="Email (Required)" required data-validation-required-message="Please enter your email address.">
+                            	<div class="help-block">
+                            		<ul role="alert">
+                            			<li>Please enter your email.</li>
+                            		</ul>
+                            	</div>
                             </div>
                         </div>
                         <div class="control-group">
@@ -3255,9 +2274,14 @@ h2, h3, h4 {
                                 <input type="text" class="form-control" name="subject" placeholder="Subject" style="margin-top:10px;">
                             </div>
                         </div>
-                        <div class="control-group">
+                        <div class="control-group error">
                             <div class="controls">
                                 <textarea class="form-control" name="message" rows="10" placeholder="Enter your message ..." required data-validation-required-message="Please enter a message." style="margin-top:10px;"></textarea>
+                            	<div class="help-block">
+                            		<ul role="alert">
+                            			<li>Please enter a message.</li>
+                            		</ul>
+                            	</div>
                             </div>
                         </div>
                         <div class="success"></div>
