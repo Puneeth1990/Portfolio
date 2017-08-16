@@ -1,47 +1,2004 @@
+
 <!DOCTYPE html>
-<html lang="en" ng-app="myApp">
+<html lang="en" ng-app="myApp" ng-controller="myController">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Puneeth Srikanta, UI/UX Designer</title><link rel="icon" type="image/jpg" href="images/PS.png" />
 
-  <head>
-    <link rel="stylesheet" href="style.css">
+    <!--Fonts-->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Amiri:400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Megrim' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Marck+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:600' rel='stylesheet' type='text/css'>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-   
-   	<script>
-   		var app=angular.module('myApp',[]);
-   		app.controller('contactFormCtrl', function($scope, $http){
-   			$scope.formModel={};
-   			
-   			if(valid){
-   				$scope.onSubmit = function(){
-   					console.log("Hi! Puneeth");
-   					console.log($scope.formModel);
-   				} 
-   				else
-   					{
-   						console.log("Invalid Form!");
-   					}
-   			};
-   		});
-   	</script> 
-   </head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.2/owl.carousel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.2/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.2/owl.theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.2/owl.transitions.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.2/owl.theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.2/owl.transitions.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/lightbox.css">
 
-  	<body>
-    	<div class="container main-content" ng-controller="contactFormCtrl">
-		<form ng-submit="onSubmit(myForm.$valid)" name="myForm" novalidate="novalidate">
-	  		<div class="form-group">
-	    		<input type="text" class="form-control" id="name" ng-model="formModel.name" placeholder="Name (Required)" ng-pattern="/^[A-Za-z0-9_]{1,32}$/" ng-minlength="7" ng-pattern-err-type="badName"  >
-	  		</div>
+    <link rel="shortcut icon" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.2.0/imagesloaded.pkgd.min.js"></script>
+    <script src="app/bootstrap.js"></script>
+	<script src="app/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
+	
+	<script src="js/App.js"></script>
+   <!--  <script>
+    $(window).load(function() {
+        $(".loader").fadeOut("slow");
+    })
+    
+    <script>
+    $(function() {
+}
+    	   $("li").click(function() {
+    	      // remove classes from all
+    	      $("li").removeClass("active");
+    	      // add class to the one we clicked
+    	      $(this).addClass("active");
+    	   });
 
-	  		<div class="form-group">
-	    		<input type="text" class="form-control" id="email" ng-model="formModel.email" placeholder="Email (Required)" required="required">
-	    		<p class="help-block" ng-show="myForm.email.$error.required"></p>
-	    		<p class="help-block" ng-show="myForm.email.$error.email"></p>
-	    	</div>
-	    	
-	    	<div class="form-group" ng-class="{'has-error':!myForm.email.$valid && !myForm.$pristine, 'has-success':myForm.email.$valid && !myForm.$pristine}">
-	    		<button class="btn btn-primary" ng-click="onSubmit()"> Send Message</button>
-	    	</div>
-	  	</form>
-		</div>
-		
-	</body>
+    </script> -->
+    
+    <!-- Navbar stick to top -->
+     <script>
+    $(document).ready(function() {
+    	  
+    	  $(window).scroll(function () {
+    	      //if you hard code, then use console
+    	      //.log to determine when you want the 
+    	      //nav bar to stick.  
+    	      console.log($(window).scrollTop())
+    	    if ($(window).scrollTop() > 280) {
+    	      $('#nav_bar').addClass('navbar-fixed');
+    	    }
+    	    if ($(window).scrollTop() < 281) {
+    	      $('#nav_bar').removeClass('navbar-fixed');
+    	    }
+    	  });
+    	});
+    </script> 
+    
+    <!-- Scroll Top -->
+    <script>
+    $(document).ready(function (){
+        $("#scrollToTop").click(function (){
+            $('html, body').animate({
+                scrollTop: $("#home").offset().top
+            }, 2000);
+        });
+    });
+    </script>   
+    
+     <!-- Hobby Carousel  -->
+    <script>
+    $(document).ready(function() {
+    	  $("#hobby-carousel").owlCarousel({
+    	    navigation: true, // Show next and prev buttons
+    	    slideSpeed: 300,
+    	    paginationSpeed: 400,
+    	    singleItem: true,
+    	    transitionStyle: "fadeUp",
+    	    autoPlay: true,
+    	    navigationText: [
+    	    "<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"     
+    	    ]
+    	  });
+    	});
+    </script>
+    
+    
+    <style>
+    	/* GENERAL
+============================================================= */
+::-moz-selection {
+    background: #E74C3C;
+    color: white;
+}
+
+::selection {
+    background: #E74C3C;
+    color: white;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    color: #5b6770;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+    a:hover, a:focus {
+        text-decoration: none;
+        color: inherit;
+    }
+
+.btn.btn-default {
+    margin-bottom: 15px;
+    padding: 14px 28px;
+    border: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    font-size: 15px;
+    font-weight: 400;
+    color: white;
+    text-transform: uppercase;
+    background-color: #E74C3C;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+    .btn.btn-default:focus {
+        outline: 0;
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+    .btn.btn-default:hover {
+        background-color: #5b6770;
+    }
+    	
+    /* SECTIONS
+============================================================== */
+.section {
+    padding-top: 50px;
+    padding-bottom: 70px;
+    background-color: #fff;
+    color: black;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+    .section-title h1 {
+        margin-bottom: 15px;
+    }
+
+    .section-title .line {
+        display: inline-block;
+        margin-bottom: 15px;
+        width: 100px;
+        height: 5px;
+        background-color: #E74C3C;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .section-title:hover .line, .section-title:focus .line {
+        width: 50px;
+    }
+
+    .section-title p {
+        margin: 0;
+    }
+
+.bg-light {
+    background-color: #F3F3F3;
+}
+
+.bg-dark {
+    background-color: #E74C3C;
+    color: white;
+}
+
+    .bg-dark .section-title .line {
+        background-color: white;
+    }
+    
+    /* PAGE HEADER
+============================================================== */
+.header-fullscreen {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    color: white;
+}
+
+    .header-fullscreen h1, .header-fullscreen h2, .header-fullscreen h3 {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 400;
+    }
+
+    .header-fullscreen h1 {
+        font-size: 4em;
+    }
+
+    .header-fullscreen h2 {
+        font-size: 2em;
+    }
+
+    .header-fullscreen h3 {
+        font-size: 1.5em;
+    }
+
+    .header-fullscreen .overlay {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: url("../images/IMG-01.jpg") repeat 0 0 scroll rgba(175, 22, 6, 0.66);
+    }
+
+    .header-fullscreen .center_text {
+        display: table;
+        width: 100%;
+        height: 100%;
+        table-layout: fixed;
+        text-align: center;
+    }
+
+        .header-fullscreen .center_text .vcenter {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+    .header-fullscreen .carousel {
+        height: 100%;
+    }
+
+        .header-fullscreen .carousel .carousel-inner, .header-fullscreen .carousel div.item, .header-fullscreen .carousel div.active {
+            height: 100%;
+        }
+
+    .header-fullscreen .carousel-control {
+        color: white;
+        text-shadow: none;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+
+        .header-fullscreen .carousel-control:hover, .header-fullscreen .carousel-control:focus {
+            filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+            opacity: 1;
+        }
+
+        .header-fullscreen .carousel-control.left, .header-fullscreen .carousel-control.right {
+            background: transparent;
+        }
+
+        .header-fullscreen .carousel-control .control-prev, .header-fullscreen .carousel-control .control-next {
+            position: absolute;
+            top: 50%;
+            z-index: 5;
+            display: inline-block;
+        }
+
+        .header-fullscreen .carousel-control .control-prev {
+            left: 50%;
+            margin-left: -15px;
+        }
+
+        .header-fullscreen .carousel-control .control-next {
+            right: 50%;
+            margin-right: -15px;
+        }
+
+        .header-fullscreen .carousel-control .control-prev, .header-fullscreen .carousel-control .control-next {
+            width: 30px;
+            height: 30px;
+            margin-top: -15px;
+            font-size: 50px;
+        }
+
+    .header-fullscreen .carousel-indicators {
+        bottom: 20%;
+    }
+
+        .header-fullscreen .carousel-indicators li {
+            width: 12px;
+            height: 12px;
+            border-radius: 12px;
+            border-color: white;
+            background-color: transparent;
+            -moz-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            -webkit-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+        }
+
+            .header-fullscreen .carousel-indicators li.active {
+                margin: 1px;
+                border-color: white;
+                background-color: white;
+            }
+
+    .header-fullscreen .carousel-inner .item {
+        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+        opacity: 0;
+        -moz-transition-property: opacity;
+        -o-transition-property: opacity;
+        -webkit-transition-property: opacity;
+        transition-property: opacity;
+    }
+
+    .header-fullscreen .carousel-inner .active {
+        filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+        opacity: 1;
+    }
+
+        .header-fullscreen .carousel-inner .active.left, .header-fullscreen .carousel-inner .active.right {
+            left: 0;
+            filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+            opacity: 0;
+            z-index: 1;
+        }
+
+    .header-fullscreen .carousel-inner .next.left, .header-fullscreen .carousel-inner .prev.right {
+        filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+        opacity: 1;
+    }
+
+    .header-fullscreen #more_header {
+        position: absolute;
+        left: 49.2%;
+        bottom: 40px;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+        margin-left: -15px;
+        display: block;
+        z-index: 10;
+        text-align: center;
+    }
+
+        .header-fullscreen #more_header span {
+            position: relative;
+            color: #fff;
+            -webkit-animation-name: drop;
+            -webkit-animation-duration: 1s;
+            -webkit-animation-timing-function: linear;
+            -webkit-animation-delay: 0s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-play-state: running;
+            animation-name: drop;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-delay: 0s;
+            animation-iteration-count: infinite;
+            animation-play-state: running;
+        }
+
+        .header-fullscreen #more_header:hover {
+            -moz-animation-name: none;
+            -webkit-animation-name: none;
+            animation-name: none;
+        }
+
+    .header-fullscreen .backstretch img {
+        position: fixed !important;
+    }
+
+/* NAVIGATION
+============================================================= */
+.navbar {
+    position: relative;
+    width: 100%;
+    z-index: 998;
+    margin: 0;
+}
+
+.navbar-default {
+    border: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.07);
+}
+
+.navbar-nav {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+    .navbar-nav > li > a,
+    .navbar-brand {
+        line-height: 30px;
+    }
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #FFFFFF;
+    background-color: #E74C3C;
+}
+
+    
+/* SERVICES
+============================================================== */
+.service {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+    .service .circle {
+        width: 150px;
+        height: 150px;
+        margin: 10px auto 25px auto;
+        border: 4px solid white;
+        background-color: white;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        -moz-box-shadow: #E74C3C 0 0 0 10px inset;
+        -webkit-box-shadow: #E74C3C 0 0 0 10px inset;
+        box-shadow: #E74C3C 0 0 0 10px inset;
+    }
+
+        .service .circle:hover, .service .circle:focus {
+            -moz-box-shadow: #E74C3C 0 0 0 0 inset;
+            -webkit-box-shadow: #E74C3C 0 0 0 0 inset;
+            box-shadow: #E74C3C 0 0 0 0 inset;
+        }
+
+        .service .circle .icon {
+            text-align: center;
+            margin-top: 10%;
+            font-size: 70px;
+            color: #E74C3C;
+            -moz-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            -webkit-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            -moz-transform: scale(1, 1);
+            -ms-transform: scale(1, 1);
+            -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+        }
+
+            .service .circle .icon:hover, .service .circle .icon:focus {
+                -moz-transform: scale(1.2, 1.2);
+                -ms-transform: scale(1.2, 1.2);
+                -webkit-transform: scale(1.2, 1.2);
+                transform: scale(1.2, 1.2);
+            }
+
+    .service h4 {
+        margin-bottom: 2px;
+    }
+
+    .service .line {
+        display: inline-block;
+        width: 0;
+        height: 2px;
+        margin-bottom: 10px;
+        background-color: white;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .service:hover .line, .service:focus .line {
+        width: 80px;
+    }
+
+    .service p {
+        margin: 0;
+    }
+    
+    
+    /* SKILL KNOBS
+============================================================= */
+.skill {
+    text-align: center;
+}
+
+    .skill input[type='text'] {
+        width: 100%;
+    }
+
+    .skill .knob {
+        margin-top: 50px !important;
+        font-size: 30px;
+        font-weight: 300;
+    }
+
+    .skill h4 {
+        margin-top: -90px;
+        padding-bottom: 90px;
+        font-size: 15px;
+    }
+    
+    
+    /* PRICING TABLE
+============================================================= */
+.table_container [class*="col"] {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 50px;
+    text-align: center;
+}
+
+.my_table {
+    margin-bottom: 30px;
+    padding: 0;
+    background-color: white;
+    list-style: none;
+}
+
+    .my_table li {
+        padding: 15px 20px;
+        border-top: 1px dotted #E5E5E5;
+        font-weight: 600;
+        color: #29353e;
+    }
+
+    .my_table .header {
+        padding: 10px;
+        border: 0;
+        color: white;
+        background-color: #8d99a2;
+    }
+
+    .my_table .price {
+        padding-bottom: 20px;
+        padding-top: 20px;
+        border: 0;
+        font-size: 32px;
+        font-weight: 600;
+        color: white;
+        background-color: #5b6770;
+    }
+
+        .my_table .price .price small {
+            font-weight: 300;
+        }
+
+    .my_table .footer {
+        padding: 0;
+        border: 0;
+    }
+
+        .my_table .footer .btn {
+            width: 100%;
+            margin: 0;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+    .my_table.active {
+        position: absolute;
+        z-index: 200;
+        width: 100%;
+        margin: -20px auto 0 auto;
+        -moz-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
+        -webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
+        box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
+    }
+
+        .my_table.active .header {
+            background-color: #E74C3C;
+        }
+        
+        
+        /* FOOTER
+============================================================= */
+.page-footer {
+    padding: 80px 0 40px 0;
+}
+
+    .page-footer .copyrights {
+        padding-top: 40px;
+    }
+    
+    
+    
+    /* MEDIA QUERIES
+============================================================== */
+@media (min-width: 768px) and (max-width: 979px) {
+    .header-fullscreen h1 {
+        font-size: 3.3em;
+    }
+
+    .header-fullscreen h2 {
+        font-size: 1.6em;
+    }
+
+    .header-fullscreen h3 {
+        font-size: 1.2em;
+    }
+
+    .header-fullscreen #more_header {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 767px) {
+    .header-fullscreen h1 {
+        font-size: 2.7em;
+    }
+
+    .header-fullscreen h2 {
+        font-size: 1.3em;
+    }
+
+    .header-fullscreen h3 {
+        font-size: 1em;
+    }
+
+    .header-fullscreen #more_header {
+        font-size: 1em;
+    }
+
+    .navbar-nav > li > a,
+    .navbar-brand {
+        line-height: 20px;
+    }
+
+    .carousel-control .control-prev,
+    .carousel-control .control-next {
+        width: 20px;
+        height: 20px;
+        margin-top: -10px;
+        margin-left: -10px;
+    }
+
+    [class*="col"][class*="inner-left"],
+    [class*="col"][class*="inner-right"] {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    [class*="col"].border-left,
+    [class*="col"].border-right {
+        border: 0;
+    }
+
+    .portfolio-filters .nav-pills > li {
+        display: block;
+        float: none;
+    }
+
+    .fancybox-prev {
+        left: 10px;
+    }
+
+    .fancybox-next {
+        right: 10px;
+    }
+
+    .my_table.active {
+        position: relative;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-fullscreen h1 {
+        font-size: 2.3em;
+    }
+
+    .header-fullscreen h2 {
+        font-size: 1.1em;
+    }
+
+    .header-fullscreen h3 {
+        font-size: 0.9em;
+    }
+
+    .header-fullscreen #more_header {
+        font-size: 0.9em;
+    }
+}
+
+/* HOBBIES */
+.hobbies blockquote {
+    border: 0;
+    font-size: 16px;
+    font-style: italic;
+    line-height: 30px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+    .hobbies blockquote p {
+        padding: 30px 0;
+    }
+
+    .hobbies blockquote cite {
+        font-weight: 700;
+        display: block;
+    }
+
+
+/* COLOR SWITCHER
+============================================================= */
+.color-switcher {
+    width: 140px;
+    left: -140px;
+    position: fixed;
+    top: 50%;
+    margin-top: -120px;
+    z-index: 1040;
+    padding: 15px;
+    background-color: #f8f8f8;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+    .color-switcher.opened {
+        left: 0;
+    }
+
+    .color-switcher .toggler {
+        position: absolute;
+        top: 0;
+        right: -48px;
+        display: inline-block;
+        background-color: #f8f8f8;
+        width: 48px;
+        height: 48px;
+        line-height: 48px;
+        text-align: center;
+        font-size: 24px;
+        color: #5b6770;
+    }
+
+    .color-switcher h4 {
+        margin: 0 0 10px;
+        font-size: 12px;
+    }
+
+    .color-switcher ul {
+        list-style: none;
+        padding: 0;
+        margin: -5px;
+    }
+
+        .color-switcher ul li {
+            display: block;
+            width: 58px;
+            float: left;
+            padding: 5px;
+        }
+
+            .color-switcher ul li.active a {
+                -moz-box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2) inset;
+                -webkit-box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2) inset;
+                box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2) inset;
+            }
+
+            .color-switcher ul li a {
+                display: block;
+                height: 40px;
+            }
+
+            .color-switcher ul li.yellow a {
+                background-color: #E74C3C;
+            }
+
+            .color-switcher ul li.red a {
+                background-color: #E74C3C;
+            }
+
+            .color-switcher ul li.green a {
+                background-color: #2ECC71;
+            }
+
+            .color-switcher ul li.blue a {
+                background-color: #00B9EE;
+            }
+
+            .color-switcher ul li.purple a {
+                background-color: #BF55EC;
+            }
+
+            .color-switcher ul li.orange a {
+                background-color: #E87E04;
+            }
+
+.fa fa-heart {
+    animation: fadeHeader 1 1s ease-in;
+    font-size: 120px;
+}
+
+#heart {
+    font-size: 60px;
+    -webkit-animation-name: example; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
+    -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes example {
+    0% {
+        font-size: 60px;
+    }
+
+    50% {
+        font-size: 120px;
+    }
+
+    100% {
+        font-size: 60px;
+    }
+}
+
+/* Standard syntax */
+@keyframes example {
+    0% {
+        font-size: 60px;
+    }
+
+    50% {
+        font-size: 120px;
+    }
+
+    100% {
+        font-size: 60px;
+    }
+}
+
+#headline {
+    font-family: 'Megrim', cursive;
+    font-size: 450%;
+    font-weight: bold;
+}
+
+#hometext {
+    font-family: 'Marck Script', cursive;
+}
+
+#aboutusText {
+    /*background: url('../img/aboutus2.jpg') no-repeat 0 rgba(255, 255, 255, 0.5);*/
+    font-family: 'Droid Serif', serif;
+    font-style: italic;
+    font-size: 16px;
+    background-size: 100% 100%;
+}
+
+#stepsarrow {
+    padding-top: 70px;
+}
+
+.playButton {
+    position: relative;
+    display: inline-block;
+}
+
+.playButtonImg {
+    z-index: 9;
+    border: 1px solid blue;
+}
+
+.playImg {
+    background: url('http://cdn1.iconfinder.com/data/icons/iconslandplayer/PNG/64x64/CircleBlue/Play1Pressed.png') center center no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70px;
+    height: 70px;
+    margin: -35px 0 0 -35px;
+    z-index: 10;
+}
+
+.work_view_images {
+    width: 50%;
+    height: 50%;
+    display: block;
+}
+
+#eAppAndroidProt {
+    width: 30%;
+    height: 50%;
+    display: block;
+}
+
+.workname {
+    font-style: italic;
+    text-align: center;
+}
+
+.forTableForm {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.details-UCB li {
+    margin-left: 20px;
+}
+
+.recontainer {
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+    width: 100%;
+}
+
+.pMargins {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.pNoMargins {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 0px;
+    margin-left: 0px;
+}
+
+.forTableForm {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+h2, h3, h4 {
+    letter-spacing: 3px;
+}
+
+/*  .loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url('http://www.beckett.com/images/loading-circle-orange.gif') 50% 50% no-repeat rgb(249,249,249);
+}  */
+        
+        /* CONTACT
+============================================================= */
+.contact {
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+    .contact .icon {
+        margin-bottom: 15px;
+        font-size: 50px;
+        color: #E74C3C;
+    }
+
+.form-control {
+    margin-bottom: 15px;
+    padding: 20px 15px;
+    border: solid 1px #E5E5E5;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+    .form-control:focus {
+        border-color: #E5E5E5;
+        outline: 0;
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+.help-block ul {
+    margin-bottom: 15px;
+    padding-left: 20px;
+    list-style: none;
+    color: #D9534F;
+}
+
+.success {
+    margin-bottom: 15px;
+    color: #5CB85C;
+}
+
+    .success .error {
+        color: #D9534F;
+    }
+
+#contactForm textarea {
+    resize: none;
+}
+
+hr {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border-color: #E5E5E5;
+}
+
+.inner-left {
+    padding-left: 40px;
+}
+
+.inner-right {
+    padding-right: 40px;
+}
+
+.border-right {
+    border-right: 1px solid #E5E5E5;
+}		
+
+
+/* Team
+============================================================= */
+.member {
+    color: #5b6770;
+}
+
+    .member .member-image {
+        position: relative;
+        overflow: hidden;
+    }
+
+        .member .member-image img {
+            width: 100%;
+            height: auto;
+            -moz-transition: all 0.5s ease-in-out;
+            -o-transition: all 0.5s ease-in-out;
+            -webkit-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+            -moz-transform: scale(1);
+            -ms-transform: scale(1);
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+
+        .member .member-image:hover img, .member .member-image:focus img {
+            -moz-transform: scale(1.2);
+            -ms-transform: scale(1.2);
+            -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+        }
+
+        .member .member-image .overlay {
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(255, 202, 55, 0);
+            -moz-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            -webkit-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .member .member-image:hover .overlay, .member .member-image:focus .overlay {
+            background-color: rgba(231, 76, 60, 0.8);
+        }
+
+        .member .member-image .social-links {
+            display: block;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            margin-top: -80px;
+            -moz-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            -webkit-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .member .member-image:hover .social-links, .member .member-image:focus .social-links {
+            top: 50%;
+            margin-top: -25px;
+        }
+
+    .member .member-details {
+        background-color: #F3F3F3;
+        padding: 20px 15px;
+    }
+
+        .member .member-details h4 {
+            color: #5b6770;
+            margin-bottom: 15px;
+        }
+        
+        
+        
+        
+        
+        
+
+		.rounded-icon 
+		{
+    		display: block;
+    		width: 50px;
+    		height: 50px;
+    		-moz-border-radius: 50%;
+    		-webkit-border-radius: 50%;
+    		border-radius: 50%;
+    		font-size: 20px;
+    		line-height: 46px;
+    		text-align: center;
+    		-moz-transition: all 0.3s ease-in-out;
+    		-o-transition: all 0.3s ease-in-out;
+    		-webkit-transition: all 0.3s ease-in-out;
+    		transition: all 0.3s ease-in-out;
+    		color: #FFFFFF;
+    		border: solid 2px #FFFFFF;
+    		background-color: transparent;
+    		text-decoration: none;
+		}
+.chart {
+  color: #999;
+  font-size: 20px;
+  display:inline-block;
+}
+
+.chart img {
+  max-width: 100px;
+  max-height: 100px;
+}
+/* END Container styles */
+
+/* Colors for the circles and positions for the graphics */
+.html {
+  top: 50px;
+  left: 45px;
+}
+
+.html + svg .outer {
+  stroke: #e34f26;
+}
+
+.css {
+  top: 55px;
+  left: 48px;
+}
+
+.css + svg .outer {
+  stroke: #0d84ce;
+}
+
+.javascript {
+  max-width: 90px;
+  max-height: 90px;
+  top: 45px;
+  left: 45px;
+}
+
+.javascript + svg .outer {
+  stroke: #f0e040;
+}
+
+.node {
+  width: 200px;
+  height: 200px;
+  top: 45px;
+  left: 45px;
+}
+
+.node + svg .outer {
+  stroke: #83cd29;
+}
+
+.chart svg {
+  top: 0;
+  left: 0;
+}
+
+.outer {
+  fill: transparent;
+  stroke: #E74C3C;
+  stroke-width: 6;
+  stroke-dasharray: 650;
+  transition: stroke-dashoffset 1s;
+  -webkit-animation-play-state: running;
+  
+  /* firefox bug fix - won't rotate at 90deg angles */
+  -moz-transform: rotate(-89deg) translateX(-190px);
+}
+
+.chart:hover .outer {
+  stroke-dashoffset: 750 !important;
+  -webkit-animation-play-state: stop;
+}
+
+.chart[data-percent='95'] .outer {
+  stroke-dashoffset: 133;
+  -webkit-animation: show95 2s;
+  animation: show95 2s;
+}
+
+@-webkit-keyframes show95 {
+  from {
+    stroke-dashoffset: 750;
+  }
+  
+  to {
+    stroke-dashoffset: 134;
+  }
+}
+#home
+@keyframes show95 {
+  from {
+    stroke-dashoffset: 537;
+  }
+  
+  to {
+    stroke-dashoffset: 124;
+  }
+}
+
+.navbar-fixed {
+    top: 0;
+    z-index: 100;
+  position: fixed;
+    width: 100%;
+}
+
+
+    </style>
+    
+</head>
+<body>
+
+    <div class="loader"></div>
+    
+    <!--Header-->
+    <header id="home" class="header-fullscreen">
+        <div class="overlay"></div>
+        <div id="carousel-header" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <!--Slide 1-->
+                <div id="slide1" class="item active">
+                    <div class="center_text">
+                        <div class="vcenter" style="text-align:center;">
+                          <h2 id="headline" style="display: block;">
+                            <span class="char1" style="display: inline-block; transition: none; transform: translateX(-8px) translateY(201px) rotate(-60deg);">H</span>
+                            <span class="char2" style="display: inline-block; transition: none; transform: translateX(-18px) translateY(170px) rotate(-54deg);">i</span>
+                            <span class="char3 empty" style="display: inline-block; transition: none; transform: translateX(-23px) translateY(151px) rotate(-51deg);">&nbsp;</span>
+                            <span class="char4" style="display: inline-block; transition: none; transform: translateX(-27px) translateY(132px) rotate(-48deg);">I</span>
+                            <span class="char5" style="display: inline-block; transition: none; transform: translateX(-29px) translateY(117px) rotate(-45deg);">'</span>
+                            <span class="char6" style="display: inline-block; transition: none; transform: translateX(-31px) translateY(91px) rotate(-39deg);">m</span>
+                            <span class="char7 empty" style="display: inline-block; transition: none; transform: translateX(-32px) translateY(65px) rotate(-33deg);">&nbsp;</span>
+                            <span class="char8" style="display: inline-block; transition: none; transform: translateX(-30px) translateY(48px) rotate(-28deg);">P</span>
+                            <span class="char9" style="display: inline-block; transition: none; transform: translateX(-25px) translateY(29px) rotate(-21deg);">u</span>
+                            <span class="char10" style="display: inline-block; transition: none; transform: translateX(-18px) translateY(14px) rotate(-14deg);">n</span>
+                            <span class="char11" style="display: inline-block; transition: none; transform: translateX(-10px) translateY(4px) rotate(-7deg);">e</span>
+                            <span class="char12" style="display: inline-block; transition: none; transform: translateX(0px) translateY(0px) rotate(0deg);">e</span>
+                            <span class="char13" style="display: inline-block; transition: none; transform: translateX(8px) translateY(3px) rotate(6deg);">t</span>
+                            <span class="char14" style="display: inline-block; transition: none; transform: translateX(15px) translateY(8px) rotate(11deg);">h</span>
+                            <span class="char15 empty" style="display: inline-block; transition: none; transform: translateX(19px) translateY(13px) rotate(14deg);">&nbsp;</span>
+                            <span class="char16" style="display: inline-block; transition: none; transform: translateX(24px) translateY(25px) rotate(20deg);">S</span>
+                            <span class="char17" style="display: inline-block; transition: none; transform: translateX(29px) translateY(44px) rotate(27deg);">r</span>
+                            <span class="char18" style="display: inline-block; transition: none; transform: translateX(32px) translateY(67px) rotate(33deg);">i</span>
+                            <span class="char19" style="display: inline-block; transition: none; transform: translateX(31px) translateY(95px) rotate(40deg);">k</span>
+                            <span class="char20" style="display: inline-block; transition: none; transform: translateX(27px) translateY(129px) rotate(47deg);">a</span>
+                            <span class="char21" style="display: inline-block; transition: none; transform: translateX(22px) translateY(156px) rotate(52deg);">n</span>
+                            <span class="char22" style="display: inline-block; transition: none; transform: translateX(13px) translateY(184px) rotate(57deg);">t</span>
+                            <span class="char23" style="display: inline-block; transition: none; transform: translateX(3px) translateY(214px) rotate(62deg);">a</span>
+                          </h2>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <h3 id="hometext" style="color:white;">And I create lovely web things!</h3>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--More-->
+        <a href="#about" class="scrollto" title="View more">
+            <div id="more_header" class="text-center">
+                <span>
+                    <i class="fa fa-angle-down fa-2x" style="padding-top:6px;"></i>
+                </span>
+            </div>
+        </a>
+
+    </header>
+	<!-- Header -->		
+
+
+
+    <!--Nav-->
+    <nav class="navbar navbar-default" id="nav_bar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Puneeth Srikanta</a>
+            </div>
+
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="#home">Home</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#work">Work</a></li>
+                    <li><a href="#process">Design Process</a></li>
+                    <li><a href="#hobbies">Testimonials</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--navbar ends here-->
+
+
+<div class="scetions2">
+    <!--about section-->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-lg-offset-2 col-lg-8 section-title wow fadeInUp">
+                    <h1>About me</h1>
+                    <div class="line"></div>
+                    <p>Who am I?</p>
+                </div>
+            </div>
+
+            <div class="row forTableForm" style="margin-top:40px;">
+            
+                <!--1-->
+                <div class="col-sm-6 col-md-5 member wow fadeInLeft1" data-wow-delay="0.3s">
+                    <div class="member-image" style="height: 100%; padding-right: 15px; padding-bottom: 4px;">
+                        <div class="overlay-icons">
+                            <ul class="list-inline text-center social-links">
+                                <li><a href="" target="_blank"><i class="fa fa-facebook rounded-icon"></i></a></li>
+                                <li><a href="" target="_blank"><i class="fa fa-linkedin rounded-icon"></i></a></li>
+                                <li><a href="" target="_blank"><i class="fa fa-google-plus rounded-icon"></i></a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--2-->
+                <div class="col-sm-6 col-md-7 member wow fadeInRight" data-wow-delay=".3s">
+                    <div id="aboutusText" class="member-image overlay-wrapper hover-overlay">
+                        <div id="aboutinnertext">
+                            <p style="text-align: justify;">
+                                I'm a Software Engineer at Intel Inc., in Santa Clara, California.
+                                I have completed my Master's in Computer Science - at University of Houston based in Houston, TX.
+                                I specialize in Algorithms, Web Development and User Interfaces visually beautiful and delivering delightful user experience. 
+                                Alongside this, I also possess expertise in front-end development, with focus on  responsiveness, 
+                                friendly code and importantly something that's attractively suited to the topic :). 
+                                <br />
+                                <br />
+                                I enjoy understanding how great designs work and showing the same to others through good, intuitive and 
+                                user-friendly experiences. My previous experience in UI/UX Design at AT&T and iGATE Global Solutions Ltd. has given me 
+                                great exposure in crafting a comprehensive look and feel for products, working in the agile environment and 
+                                driving requirements from concept to release. Prior to this, I also had the wonderful opportunity to be a part 
+                                of NIE UI/UX Group, where I enjoyed designing Mobile and Web applications, focusing on simplicity, 
+                                and user friendly experience. 
+                                <br />
+                                <br />
+                                I love working on web design and development and have driven UI requirements from concept to deployment. Possessing 
+                                skills that are a combination of design and development, I can make things beautiful, interactive and enjoyable to use. 
+                                <br />
+                                <br />
+                                Thank you for stopping by :)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+            
+                <!--3-->
+                <div class="col-sm-6 col-md-5 member wow fadeInLeft" data-wow-delay=".3s">
+                    <div class="member-details text-center">
+                        <h4>Puneeth Srikanta</h4>
+                    </div>
+                </div>
+                
+                <!--4-->
+                <div class="col-sm-6 col-md-7 member wow fadeInRight" data-wow-delay=".3s">
+                    <div class="member-details text-center">
+                        <h4>User Experience Design Specialist at Intel</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/#team-->
+       
+    <section id="process" class="bg-dark" style="height:500px;">
+        <div class="container">
+            <div class="row" style="padding-top:50px;">
+                <div class="col-sm-12 col-lg-offset-2 col-lg-8 section-title wow fadeInUp">
+                    <h1 id="design">My Design Process</h1>
+                </div>
+                <div class="line"></div>
+                <p style="width:750px; padding-left:500px;">One out of a hundred ways!!</p>
+            </div>
+
+            <div class="row" style="padding-top:26px;">
+                <div class="col-sm-6 col-md-2 service wow fadeInLeft" data-wow-delay=".3s">
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <div class="circle">
+                                <div class="icon">
+                                    <i class="fa fa-pencil-square-o"></i>
+                                </div>
+                            </div>
+                            <h5>Research</h5>
+                        </div>
+                        <div class="col-sm-2" id="stepsarrow" style="padding-top: 70px;">
+                            <i class="fa fa-arrow-right" style="font-size:15px;"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-2 service wow fadeInLeft" data-wow-delay=".3s">
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <div class="circle">
+                                <div class="icon">
+                                    <i class="fa fa-table" style="font-size:50px;"></i>
+                                </div>
+                            </div>
+                            <h5>Wireframes</h5>
+                        </div>
+                        <div class="col-sm-2" id="Div1" style="padding-top: 70px;">
+                            <i class="fa fa-arrow-right" style="font-size:15px;"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-2 service wow fadeInLeft" data-wow-delay=".3s">
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <div class="circle">
+                                <div class="icon">
+                                    <i class="fa fa-paint-brush" style="font-size:50px;"></i>
+                                </div>
+                            </div>
+                            <h5>Visual concepts</h5>
+                        </div>
+                        <div class="col-sm-2" id="Div2" style="padding-top: 70px;">
+                            <i class="fa fa-arrow-right" style="font-size:15px;"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-2 service wow fadeInRight" data-wow-delay=".3s">
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <div class="circle">
+                                <div class="icon">
+                                    <i class="fa fa-indent" style="font-size:50px;"></i>
+                                </div>
+                            </div>
+                            <h5>Prototypes</h5>
+                        </div>
+                        <div class="col-sm-2" id="Div3" style="padding-top: 70px;">
+                            <i class="fa fa-arrow-right" style="font-size:15px;"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-2 service wow fadeInRight" data-wow-delay=".3s">
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <div class="circle">
+                                <div class="icon">
+                                    <i class="fa fa-users" style="font-size:50px;"></i>
+                                </div>
+                            </div>
+                            <h5>User testing</h5>
+                        </div>
+                        <div class="col-sm-2" id="Div4" style="padding-top: 70px;">
+                            <i class="fa fa-arrow-right" style="font-size:15px;"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-2 service wow fadeInRight" data-wow-delay=".3s">
+                    <div class="circle">
+                        <div class="icon">
+                            <i class="fa fa-file-code-o" style="font-size:50px;"></i>
+                        </div>
+                    </div>
+                    <h5>Development</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!--My Testimonials-->
+    <section id="hobbies" class="section" data-stellar-background-ratio="0.5">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-lg-offset-2 col-lg-8 section-title wow fadeInUp">
+                    <h1></h1>
+                </div>
+            </div>
+
+            <div class="row wow fadeInUp">
+                <div id="hobby-carousel" class="hobbies owl-carousel">
+                    <div class="item col-xs-10 col-xs-offset-1 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+                        <blockquote>
+                            <i class="fa fa-quote-left fa-4x"></i>
+                            <br>
+                            <img src="" style="height: 30%; width: 30%;" />
+                            <p>
+                                "Puneeth is a delight to work with.  His sense of design is excellent, 
+                                and as leader of a team of 5 peers he did a great job motivating them 
+                                to produce an outstanding project under considerable pressure."
+                            </p>
+                            <cite>- Murty Kurella - Project Manager - Intel -</cite>
+                        </blockquote>
+                    </div>
+
+                    <div class="item col-xs-10 col-xs-offset-1 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+                        <blockquote>
+                            <i class="fa fa-quote-left fa-4x"></i>
+                            <br>
+                            <img src="" style="height: 28%; width: 28%;" />
+                            <p>
+                                "Puneeth has an amazing eye for aesthetic design. I was impressed with his enthusiasm and passion to think deeper about projects he works on. 
+                                He has great intuition for when things look just right or when there's something even minor missing. He's cheerful and fun to work with!"
+                            </p>
+                            <cite>- Bettayeb - Professor, UHCL -</cite>
+                        </blockquote>
+                    </div>
+
+                    <div class="item col-xs-10 col-xs-offset-1 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+                        <blockquote>
+                            <i class="fa fa-quote-left fa-4x"></i>
+                            <br>
+                            <img src="" style="height: 28%; width: 28%;" />
+                            <p>
+                                "Passionate and hard-working, Puneeth has a great design instinct when it comes to making sure 
+                                everything on the screen looks perfect. He has been seen to come up with innovative interfaces 
+                                by going about his love for making things look beautiful! - but within the given constraints."
+                            </p>
+                            <cite>- Roshan Srinivas - Software Developer, Intel -</cite>
+                        </blockquote>
+                    </div>
+
+                    <div class="item col-xs-10 col-xs-offset-1 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+                        <blockquote>
+                            <i class="fa fa-quote-left fa-4x"></i>
+                            <br>
+                            <img src="" style="height: 28%; width: 28%;" />
+                            <p>
+                                "Puneeth is impressively conscious of the latest trends and brings about a good mix-and-match of 
+                                user interface elements. He is dedicated towards understanding his users to enhance their experiences. He 
+                                brings about a good balance by taking his creativity in the right direction owing to his development knowledge 
+                                and is a pleasure to work with!"
+                            </p>
+                            <cite>- Ganesh - Senior Software Engineer, Sapot Systems -</cite>
+                        </blockquote>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--achievements-->
+    
+    
+    <!--skills-->
+    <section id="skills" class="section bg-light" style="background-color:#F3F3F3">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-lg-offset-2 col-lg-8 section-title wow fadeInUp">
+                    <h1>What I do best</h1>
+                    <div class="line"></div>
+                    <p>My handy skills</p>
+                </div>
+            </div>
+			
+			<div class="row-circle">
+                <div class="col-sm-6 col-md-3 skill">
+						<figure class="chart" data-percent="95">
+							<input type="text" class="knob" value="95" data-fgcolor="#E74C3C" data-bgcolor="#EEEEEE" readonly="readonly" style="width: 180px;height: 170px;position: absolute;border: 0px;background: none;text-align: center;color: inherit;/* padding: 0px; */-webkit-appearance: none;">
+					    		<svg width="200" height="200">
+      								<circle class="outer" cx="95" cy="95" r="85" transform="rotate(-90, 95, 95)"/>
+    							</svg>
+  						</figure>
+  						 <h5 style="padding-left:36px;font-family:Montserrat, sans-serif;font-weight: 700;text-transform: uppercase;margin-top: 10px;margin-bottom: 10px;font-size: 14px;">HTML5 &amp; CSS3</h5>
+				</div>
+
+			
+                <div class="col-sm-6 col-md-3 skill">
+						<figure class="chart" data-percent="95">
+							<input type="text" class="knob" value="90" data-fgcolor="#E74C3C" data-bgcolor="#EEEEEE" readonly="readonly" style="width: 180px;height: 170px;position: absolute;vertical-align: middle;/* margin-top: 66px; *//* margin-left: -152px; */border: 0px;background: none;text-align: center;color: inherit;/* padding: 0px; */-webkit-appearance: none;">
+					    		<svg width="200" height="200">
+      								<circle class="outer" cx="95" cy="95" r="85" transform="rotate(-90, 95, 95)"/>
+    							</svg>
+  						</figure>
+  						<h5 style="font-family:Montserrat, sans-serif;font-weight: 700;text-transform: uppercase;margin-top: 10px;margin-bottom: 10px;font-size: 14px;width:266px;">Visual &amp; Interaction Design</h5>
+				</div>
+
+				 <div class="col-sm-6 col-md-3 skill">
+						<figure class="chart" data-percent="95">
+							<input type="text" class="knob" value="92" data-fgcolor="#E74C3C" data-bgcolor="#EEEEEE" readonly="readonly" style="width: 180px;height: 170px;position: absolute;vertical-align: middle;/* margin-top: 66px; *//* margin-left: -152px; */border: 0px;background: none;text-align: center;color: inherit;/* padding: 0px; */-webkit-appearance: none;">
+					    		<svg width="200" height="200">
+      								<circle class="outer" cx="95" cy="95" r="85" transform="rotate(-90, 95, 95)"/>
+    							</svg>
+  						</figure>
+  						<h5 style="padding-left:36px;font-family:Montserrat, sans-serif;font-weight: 700;text-transform: uppercase;margin-top: 10px;margin-left:22px;margin-bottom: 10px;font-size: 14px;">Branding</h5>
+				</div>
+				
+				 <div class="col-sm-6 col-md-3 skill">
+						<figure class="chart" data-percent="95">
+							<input type="text" class="knob" value="85" data-fgcolor="#E74C3C" data-bgcolor="#EEEEEE" readonly="readonly" style="width: 180px;height: 170px;position: absolute;vertical-align: middle;/* margin-top: 66px; *//* margin-left: -152px; */border: 0px;background: none;text-align: center;color: inherit;/* padding: 0px; */-webkit-appearance: none;">
+					    		<svg width="200" height="200">
+      								<circle class="outer" cx="95" cy="95" r="85" transform="rotate(-90, 95, 95)"/>
+    							</svg>
+  						</figure>
+  						<h5 style="padding-left:36px;font-family:Montserrat, sans-serif;font-weight: 700;text-transform: uppercase;margin-top: 10px;margin-bottom: 10px;font-size: 14px;">JavaScript &amp; JQuery</h5>
+				</div>
+                </div> 
+                </div>     
+    </section>
+    <!--skills-->
+
+    <!--Work areas-->
+    <section id="workareas" class="bg-dark" style="height:250px;">
+        <div class="container">
+            <div class="row" >
+                <div class="col-sm-12" >
+                    <div id="workarea-carousel" class="owl-carousel owl-theme-workareas" style="padding-top:80px;padding-left:60px;">
+                        <div class="workarea text-center" style="display:inline-block;width:226.875px;height:18.889;padding-top:40px;padding-bottom:20px;border-right-width:1.111px;border-right: solid 1px #E5E5E5;">
+                            <a href="#" target="_blank" style="text-decoration:none; color:white;text-align:center;">Web</a>
+                        </div>
+
+                        <div class="workarea text-center" style="display:inline-block;width:226.875px;height:18.889;padding-top:40px;padding-bottom:20px;border-right-width:1.111px;border-right: solid 1px #E5E5E5;">
+                            <a href="#" target="_blank" style="text-decoration:none; color:white;">Tablet</a>
+                        </div>
+
+                        <div class="workarea text-center" style="display:inline-block;width:226.875px;height:18.889;padding-top:40px;padding-bottom:20px;border-right-width:1.111px;border-right: solid 1px #E5E5E5;">
+                            <a href="#" target="_blank" style="text-decoration:none; color:white;">Mobile</a>
+                        </div>
+
+                        <div class="workarea text-center" style="display:inline-block;width:226.875px;height:18.889;padding-top:40px;padding-bottom:20px;border-right-width:1.111px;border-right: solid 1px #E5E5E5;">
+                            <a href="#" target="_blank" style="text-decoration:none; color:white;">Logos</a>
+                        </div>
+
+                        <div class="workarea text-center" style="display:inline-block;width:226.875px;height:18.889;padding-top:40px;padding-bottom:20px;border-right-width:1.111px;border-right: solid 1px #E5E5E5;">
+                            <a href="#" target="_blank" style="text-decoration:none; color:white;">Doodles</a>
+                        </div>
+
+                        <div class="workarea text-center" style="display:inline-block;width:226.875px;height:18.889;padding-top:40px;padding-bottom:20px;border-right-width:1.111px;border-right: solid 1px #E5E5E5;">
+                            <a href="#" target="_blank" style="text-decoration:none; color:white;">Book Design</a>
+                        </div>
+
+                        <div class="workarea text-center" style="display:inline-block;width:226.875px;height:18.889;padding-top:40px;padding-bottom:20px;border-right-width:1.111px;border-right: solid 1px #E5E5E5;">
+                            <a href="#" target="_blank" style="text-decoration:none; color:white;">Tatoo Design</a>
+                        </div>
+
+                        <div class="workarea text-center" style="display:inline-block;width:226.875px;height:18.889;padding-top:40px;padding-bottom:20px;border-right-width:1.111px;border-right: solid 1px #E5E5E5;">
+                            <a href="#" target="_blank" style="text-decoration:none; color:white;">Typography</a>
+                        </div>
+
+                        <div class="workarea text-center" style="display:inline-block;width:226.875px;height:18.889;padding-top:40px;padding-bottom:20px;border-right-width:1.111px;border-right: solid 1px #E5E5E5;">
+                            <a href="#" target="_blank" style="text-decoration:none; color:white;">Motion Design</a>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--Extra table-->
+    <section id="extra" class="section bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-lg-offset-2 col-lg-8 section-title wow fadeInUp">
+                    <h1>Experience</h1>
+                    <div class="line"></div>
+                    <p>What I'm good at in a nutshell</p>
+                </div>
+            </div>
+
+            <div class="row table_container">
+                <div class="col-sm-4">
+                    <ul class="my_table wow fadeInUp" data-wow-delay=".3s">
+                        <li class="price">Skills</li>
+                        <li>HTML, CSS & JS</li>
+                        <li>Bootstrap & Responsive Design</li>
+                        <li>Interaction Design</li>
+                        <li>Visual Design</li>
+                        <li>Wireframing & Prototyping</li>
+                        <li>User Research & Usability Testing</li>
+                        <li class="footer"><a href="#" class="btn btn-default">UI & UX</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-sm-4">
+                    <ul class="my_table active wow fadeInUp" data-wow-delay=".6s">
+                        <li class="price" style="background-color: #E74C3C;">Work Experience</li>
+                        <li>Intel, CA, USA</li>
+                        <li>AT&T, NY, USA</li>
+                        <li>iGATE Global Solutions Limited, India</li>
+                        <li>Member of SCOUT NIE, KA, IND</li>
+                        <li>Member of UHUX Houston, TX, USA</li>
+                        <li>Member of UHUI Houston, TX, USA</li>
+                        <li>Member of UHUIUX Houston, TX, USA</li>
+                        <li class="footer"><a href="#" class="btn btn-default">Full time & Internships</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-sm-4">
+                    <ul class="my_table wow fadeInUp" data-wow-delay=".9s">
+                        <li class="price">Tools</li>
+                        <li>Keynote</li>
+                        <li>Adobe CC, Sketch, Omnigraffle</li>
+                        <li>Axure, Framer, Invision</li>
+                        <li>Quartz Composer</li>
+                        <li>Pencil & Paper, Keynotes</li>
+                        <li>Marvel, Balsamiq, UXPIN</li>
+                        <li class="footer"><a href="#" class="btn btn-default">Brainstorming & UI Design</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--extra table-->
+
+
+    <!--Contact me-->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-lg-offset-2 col-lg-8 section-title wow fadeInUp">
+                    <h1 style="text-transform:uppercase;font-weight:700;">Contact me</h1>
+                    <div class="line"></div>
+                    <p>Get in touch with me!</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-4 contact wow bounceIn" data-wow-delay=".3s">
+                    <div class="icon">
+                        <i class="fa fa-envelope"></i>
+                    </div>
+                    <address>
+                        <a href="mailto:#">puneethsrikanta@gmail.com</a><br>
+                        <a href="mailto:#">puneethx.srikanta@intel.com</a>
+                    </address>
+                </div>
+                <div class="col-sm-4 contact wow bounceIn" data-wow-delay=".6s">
+                    <div class="icon">
+                        <i class="fa fa-phone"></i>
+                    </div>
+                    <address>
+                        +1 832-808-8862
+                    </address>
+                </div>
+                <div class="col-sm-4 contact wow bounceIn" data-wow-delay=".9s">
+                    <div class="icon">
+                        <i class="fa fa-map-marker"></i>
+                    </div>
+                    <address>
+                        San Jose<br>
+                        CA - 95110, United States
+				
+                    </address>
+                </div>
+            </div>
+
+            <div class="row" style="padding-top:40px;">
+                <div class="col-sm-6 inner-right border-right wow fadeInLeft" data-wow-delay=".3s">
+                    <h3>Leave a Message</h3>
+                    <form name="contactForm" id="contactForm" novalidate>
+                        <div class="control-group">
+                            <div class="controls">
+                                <input type="text" class="form-control" name="name" placeholder="Name (Required)" required data-validation-required-message="Please enter your name.">
+                                <div class="help-block">
+                            		<ul role="alert">
+                            			<li>Please enter your name.</li>
+                            		</ul>
+                            	</div>
+                            </div>
+                        </div>
+                        <div class="control-group error">
+                            <div class="controls">
+                                <input type="email" class="form-control" name="email" placeholder="Email (Required)" required data-validation-required-message="Please enter your email address.">
+                            	<div class="help-block">
+                            		<ul role="alert">
+                            			<li>Please enter your email.</li>
+                            		</ul>
+                            	</div>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <div class="controls">
+                                <input type="text" class="form-control" name="subject" placeholder="Subject" style="margin-top:10px;">
+                            </div>
+                        </div>
+                        <div class="control-group error">
+                            <div class="controls">
+                                <textarea class="form-control" name="message" rows="10" placeholder="Enter your message ..." required data-validation-required-message="Please enter a message." style="margin-top:10px;"></textarea>
+                            	<div class="help-block">
+                            		<ul role="alert">
+                            			<li>Please enter a message.</li>
+                            		</ul>
+                            	</div>
+                            </div>
+                        </div>
+                        <div class="success"></div>
+                        <button type="submit" class="btn btn-default btn-lg" ng-disabled="contactForm.$invalid">Send Message</button>
+                    </form>
+                    <!--/#contactForm-->
+                </div>
+
+                <div class="col-sm-6 inner-left wow fadeInRight" data-wow-delay=".3s">
+                    <h3>Additional info</h3>
+                    <p style="font-family: "Open Sans", sans-serif;font-size: 14px;font-weight: 300;">For any extra information on my work, to know more about this site, or to simply get in touch, send me a message here!</p>
+                    <hr>
+                    <br />
+                    <h3>See More!</h3>
+                    <a href="http://file:///C:/Users/Puneeth/Desktop/Puneeth%20Srikanta_Resume.pdf" target="_blank" style="text-decoration: underline;">My Resume</a>
+                    <br />
+                </div>
+            </div>
+        </div>
+    </section>
+
+	</div>
+    <!--Footer-->
+    <footer class="page-footer bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="social-links wow fadeInDown">
+                    <ul class="list-inline text-center">
+                        <li><a href="" target="_blank"><i class="fa fa-facebook rounded-icon"></i></a></li>
+                        <li><a href="" target="_blank"><i class="fa fa-linkedin rounded-icon"></i></a></li>
+                        <li><a href="" target="_blank"><i class="fa fa-google-plus rounded-icon"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="copyrights text-center wow fadeInUp">
+                    <p style="padding-top:20px;">&copy; 2017 <a href="#" style="text-decoration:none;color:white;">Puneeth Srikanta</a></p>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="scroll-to-top" id="scrollToTop" title="Scroll to top">
+       				<i class="fa fa-angle-double-up" style="font-size:26px;float:right;padding-right:20px;color:white;" aria-hidden="true"></i>
+    			</a>
+    </footer>
+
+   <!-- back to top
+    <a href="#" class="scroll-to-top" title="Scroll to top">
+       <i class="fa fa-angle-double-up" style="font-size:36px" aria-hidden="true"></i>
+    </a> --> 
+
+    <!--JavaScript
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.3/jquery.sticky.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stellar.js/0.6.2/jquery.stellar.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/jquery.magnific-popup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.2.0/imagesloaded.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-Knob/1.2.12/jquery.knob.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+    <script src="js/jqBootstrapValidation.min.js"></script>
+    <script src="js/twitterFetcher.min.js"></script>
+    <script src="js/main.js"></script>
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.1/js/lightbox.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="app/Scripts/jquery-3.2.1.min.js"></script>
+	<script src="app/Scripts/bootstrap.min.js"></script>
+	<script src="app/Scripts/ui-bootstrap-tpls-0.14.3.min.js"></script>
+	<script src="app/Scripts/bootstrap.js"></script>	
+    <script src="js/jquery.arctext.js"></script>
+    
+    
+    <script type="text/javascript">
+        var $headline = $('#headline').hide();
+        google.load('webfont', '1');
+
+        google.setOnLoadCallback(function () {
+            WebFont.load({
+                google: {
+                    families: ['Montserrat', 'Concert One']
+                },
+                fontactive: function (fontFamily, fontDescription) {
+                    init();
+                },
+                fontinactive: function (fontFamily, fontDescription) {
+                    init();
+                }
+            });
+        });
+
+        function init() {
+            $headline.show().arctext({ radius: 400 });
+        };
+
+    </script> -->
+</body>
 </html>
