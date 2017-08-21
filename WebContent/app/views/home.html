@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Puneeth Srikanta, UI/UX Designer</title><link rel="icon" type="image/jpg" href="images/PS.png" />
+    <title>Puneeth Srikanta, UI/UX Designer</title><link rel="icon" type="image/jpg" href="" />
 
     <!--Fonts-->
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
@@ -119,6 +119,67 @@
 		}
 	});
 </script>
+    
+   <!-- Navbar stick to top -->
+     <script>
+    $(document).ready(function() {
+    	  
+    	  $(window).scroll(function () {
+    	      //if you hard code, then use console
+    	      //.log to determine when you want the 
+    	      //nav bar to stick.  
+    	      console.log($(window).scrollTop())
+    	    if ($(window).scrollTop() > 280) {
+    	      $('#nav_bar').addClass('navbar-fixed');
+    	    }
+    	    if ($(window).scrollTop() < 281) {
+    	      $('#nav_bar').removeClass('navbar-fixed');
+    	    }
+    	  });
+    	});
+    </script> 
+    
+    <!-- Scroll Top -->
+    <script>
+    $(document).ready(function (){
+        $("#scrollToTop").click(function (){
+            $('html, body').animate({
+                scrollTop: $("#home").offset().top
+            }, 2000);
+        });
+    });
+    </script>   
+    
+     <!-- Hobby Carousel  -->
+    <script>
+    $(document).ready(function() {
+    	  $("#hobby-carousel").owlCarousel({
+    	    navigation: true, // Show next and prev buttons
+    	    slideSpeed: 300,
+    	    paginationSpeed: 400,
+    	    singleItem: true,
+    	    transitionStyle: "fadeUp",
+    	    autoPlay: true,
+    	    navigationText: [
+    	    "<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"     
+    	    ]
+    	  });
+    	});
+    </script>
+    
+     <!-- Workarea Carousel  -->
+    <script>
+    $(document).ready(function() {
+    	  $("#workarea-carousel").owlCarousel({
+    	    slideSpeed: 300,
+    	    paginationSpeed: 400,
+    	    items:5,
+    	    transitionStyle: "fadeUp",
+    	    autoPlay: true,
+    	  });
+    	});
+    </script>
+    
     
     <style>
     	/* GENERAL
