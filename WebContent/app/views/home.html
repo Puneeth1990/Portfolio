@@ -65,9 +65,7 @@
 				url : 'userdetails'
 			}).then(function successCallback(response) {
 				$scope.users = response.data;
-				console.log(response.data);
 			}, function errorCallback(response) {
-				console.log(response.statusText);
 			});
 		}
 		
@@ -83,7 +81,6 @@
 			}).then(getUserDetails(), clearForm())
 			  .success(function(data){
 				$scope.users= data
-				console.log(data);
 		    });
 		}
 		
@@ -102,14 +99,44 @@
 	});
 </script>
 
+	
+	
+	 <!-- NAVBAR -->
+    <script>
+    $('.navbar').sticky({
+        topSpacing: 0,
+    });
 
-	  <script>
-    $(window).load(function() {
-        $(".loader").fadeOut("slow");
-    })
+    $('body').scrollspy({
+        target: '.navbar-default',
+        offset: $('.navbar').outerHeight(),
+    });
     </script>
     
+    
+        <!-- COLLAPSE NAVIGATION ON CLICK -->
     <script>
+    $(".navbar-nav li a").click(function (e) {
+        $('.navbar-toggle:visible').click();
+    });
+
+    </script>
+    
+    
+    <!--  SCROLL TO -->
+    <script>
+    $(".navbar-nav li a, .scrollto").bind('click', function (e) {
+        var href = $(this).attr('href'),
+			navHeight = $('.navbar').outerHeight() - 1,
+			offset = $(href).offset().top;
+        if (href != '#') {
+            $('html,body').animate({ scrollTop: offset - navHeight }, 1500, 'easeInOutExpo');
+        }
+        e.preventDefault();
+    });
+    </script>
+    
+      <script>
     $(function() {
 
     	   $("li").click(function() {
@@ -120,7 +147,7 @@
     	   });
     })
     </script> 
-	
+    
     
    <!-- Navbar stick to top -->
      <script>
@@ -130,7 +157,7 @@
     	      //if you hard code, then use console
     	      //.log to determine when you want the 
     	      //nav bar to stick.  
-    	      console.log($(window).scrollTop())
+    	      //console.log($(window).scrollTop())
     	    if ($(window).scrollTop() > 280) {
     	      $('#nav_bar').addClass('navbar-fixed');
     	    }
@@ -156,15 +183,15 @@
     <script>
     $(document).ready(function() {
     	  $("#hobby-carousel").owlCarousel({
-    	    navigation: true, // Show next and prev buttons
+    	    /* navigation: true,  Show next and prev buttons */
     	    slideSpeed: 300,
     	    paginationSpeed: 400,
     	    singleItem: true,
     	    transitionStyle: "fadeUp",
     	    autoPlay: true,
-    	    navigationText: [
+    	    /* navigationText: [
     	    "<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"     
-    	    ]
+    	    ] */
     	  });
     	});
     </script>
@@ -180,6 +207,12 @@
     	    autoPlay: true,
     	  });
     	});
+    </script>
+    
+	  <script>
+    $(window).load(function() {
+        $(".loader").fadeOut("slow");
+    })
     </script>
     
     
@@ -345,14 +378,17 @@ a {
 
     .header-fullscreen .overlay {
         display: block;
-        width: 100%;
-        height: 100%;
         position: absolute;
         top: 0;
         right: 0;
         bottom: 0;
         left: 0;
-        background: url("../images/IMG-01.jpg") repeat 0 0 scroll rgba(175, 22, 6, 0.66);
+        background: url("../images/DSC_0490.JPG") repeat 0 0 scroll rgba(231, 76, 60, 0.6);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: left top;
+        height:100%;
+        width:100%;
     }
 
     .header-fullscreen .center_text {
@@ -502,7 +538,13 @@ a {
             -webkit-animation-name: none;
             animation-name: none;
         }
-
+        
+	#more_header1
+	{
+		position: relative;
+	    -webkit-animation: moving 2s infinite;
+    	animation: moving 2s infinite;
+	}
     .header-fullscreen .backstretch img {
         position: fixed !important;
     }
@@ -962,6 +1004,40 @@ a {
     }
 }
 
+/*-----------------------------*/
+@-webkit-keyframes moving {
+    from {top: 0px;}
+    to {top: 30px;}
+}
+
+@keyframes moving {
+    from {top: 0px;}
+    to {top: 30px;}
+}
+
+/*About us Text transition move from left to right*/
+  @-webkit-keyframes move1 {
+   from { -webkit-transform: translateX(-180px); }
+   to { -webkit-transform: translateX(1px); }
+}
+@keyframes move1 {
+   from { transform: translateX(-180px); }
+   to { transform: translateX(1px); }
+}  
+
+
+
+/* About us Text transition move from right to left */
+ @-webkit-keyframes move {
+   from { -webkit-transform: translateX(180px); }
+   to { -webkit-transform: translateX(-2px); }
+}
+@keyframes move {
+   from { transform: translateX(180px); }
+   to { transform: translateX(-2px); }
+}  
+ 
+
 /* Standard syntax */
 @keyframes example {
     0% {
@@ -981,19 +1057,37 @@ a {
     font-family: 'Megrim', cursive;
     font-size: 450%;
     font-weight: bold;
+     position: relative;
+    -webkit-animation: moving 5s infinite;
+    animation: moving 5s infinite;
 }
 
 #hometext {
     font-family: 'Marck Script', cursive;
+     position: relative;
+    -webkit-animation: moving 5s infinite;
+    animation: moving 5s infinite;
 }
 
-#aboutusText {
-    /*background: url('../img/aboutus2.jpg') no-repeat 0 rgba(255, 255, 255, 0.5);*/
+   #imagetext {
+	 -webkit-animation: move1 3s;
+  	 animation: move1 3s;
+  	 -webkit-animation-fill-mode: forwards;
+  	animation-fill-mode: forwards;
+}  
+
+
+ #aboutusText {
     font-family: 'Droid Serif', serif;
     font-style: italic;
     font-size: 16px;
     background-size: 100% 100%;
-}
+   	-webkit-animation: move 3s;
+  	animation: move 3s;
+  	-webkit-animation-fill-mode: forwards;
+  	animation-fill-mode: forwards;
+  	right:0;
+}  
 
 #stepsarrow {
     padding-top: 70px;
@@ -1163,6 +1257,33 @@ hr {
 }		
 
 
+/* workareas
+============================================================= */
+.workareas {
+    padding: 60px 0;
+}
+
+    .workareas .workarea {
+        padding: 20px 0;
+        border-right: solid 1px #E5E5E5;
+    }
+
+        .workareas .workarea img {
+            display: block;
+            margin: 0 auto;
+            filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+            opacity: 1;
+            -moz-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            -webkit-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .workareas .workarea:hover img {
+            filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+            opacity: 0.5;
+        }
+
 /* Team
 ============================================================= */
 .member {
@@ -1240,10 +1361,7 @@ hr {
             color: #5b6770;
             margin-bottom: 15px;
         }
-        
-        
-        
-        
+
         
         
 
@@ -1434,9 +1552,9 @@ hr {
 
         <!--More-->
         <a href="#about" class="scrollto" title="View more">
-            <div id="more_header" class="text-center">
+            <div id="more_header" class="text-center" style="width: 63.98438px;height: 63.98438px;">
                 <span>
-                    <i class="fa fa-angle-down fa-2x" style="padding-top:6px;"></i>
+                    <i class="fa fa-angle-down fa-2x" id="more_header1" style="padding-top:6px;"></i>
                 </span>
             </div>
         </a>
@@ -1474,7 +1592,6 @@ hr {
     <!--navbar ends here-->
 
 
-<div class="scetions2">
     <!--about section-->
     <section id="about" class="section">
         <div class="container">
@@ -1489,14 +1606,15 @@ hr {
             <div class="row forTableForm" style="margin-top:40px;">
             
                 <!--1-->
-                <div class="col-sm-6 col-md-5 member wow fadeInLeft1" data-wow-delay="0.3s">
-                    <div class="member-image" style="height: 100%; padding-right: 15px; padding-bottom: 4px;">
-                        <div class="overlay-icons">
+                <div class="col-sm-6 col-md-5 member wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;"> 
+                    <div class="member-image" id="imagetext" style="height: 100%; padding-right: 15px; padding-bottom: 4px;">
+                        <img data-src="images/barbara-palvin-.jpg" class="img-responsive" style="height: 100%; width: 95%;">
+                        <div class="overlay">
                             <ul class="list-inline text-center social-links">
-                                <li><a href="" target="_blank"><i class="fa fa-facebook rounded-icon"></i></a></li>
-                                <li><a href="" target="_blank"><i class="fa fa-linkedin rounded-icon"></i></a></li>
-                                <li><a href="" target="_blank"><i class="fa fa-google-plus rounded-icon"></i></a></li>
-
+                                <li><a href="https://facebook.com/puneeth.nie.s" target="_blank"><i class="fa fa-facebook rounded-icon"></i></a></li>
+                        		<li><a href="https://github.com/Puneeth1990" target="_blank"><i class="fa fa-github rounded-icon"></i></a></li>
+                        		<li><a href="https://twitter.com/PuneethSrikanta" target="_blank"><i class="fa fa-twitter rounded-icon"></i></a></li>
+                        		<li><a href="https://plus.google.com/u/0/109466219728816928248" target="_blank"><i class="fa fa-google-plus rounded-icon"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -1535,14 +1653,14 @@ hr {
             <div class="row">
             
                 <!--3-->
-                <div class="col-sm-6 col-md-5 member wow fadeInLeft" data-wow-delay=".3s">
+                <div class="col-sm-6 col-md-5 member wow fadeInLeft" id="imagetext" data-wow-delay=".0s">
                     <div class="member-details text-center">
                         <h4>Puneeth Srikanta</h4>
                     </div>
                 </div>
                 
                 <!--4-->
-                <div class="col-sm-6 col-md-7 member wow fadeInRight" data-wow-delay=".3s">
+                <div class="col-sm-6 col-md-7 member wow fadeInRight" id="aboutusText" data-wow-delay=".0s">
                     <div class="member-details text-center">
                         <h4>User Experience Design Specialist at Intel</h4>
                     </div>
@@ -1689,7 +1807,7 @@ hr {
                                 "Puneeth has an amazing eye for aesthetic design. I was impressed with his enthusiasm and passion to think deeper about projects he works on. 
                                 He has great intuition for when things look just right or when there's something even minor missing. He's cheerful and fun to work with!"
                             </p>
-                            <cite>- Bettayeb - Professor, UHCL -</cite>
+                            <cite>- Bettayeb - Professor, UH -</cite>
                         </blockquote>
                     </div>
 
@@ -1718,7 +1836,7 @@ hr {
                                 brings about a good balance by taking his creativity in the right direction owing to his development knowledge 
                                 and is a pleasure to work with!"
                             </p>
-                            <cite>- Ganesh - Senior Software Engineer, Sapot Systems -</cite>
+                            <cite>- Ganesh - Senior Software Engineer, Intel -</cite>
                         </blockquote>
                     </div>
 
@@ -1973,7 +2091,7 @@ hr {
                     <hr>
                     <br />
                     <h3>See More!</h3>
-                    <a href="http://file:///C:/Users/Puneeth/Desktop/Puneeth%20Srikanta_Resume.pdf" target="_blank" style="text-decoration: underline;">My Resume</a>
+                    <a href="documents/Puneeth Srikanta_Resume.pdf" target="_blank" style="text-decoration: underline;">My Resume</a>
                     <br />
                 </div>
             </div>
@@ -1985,11 +2103,12 @@ hr {
     <footer class="page-footer bg-dark">
         <div class="container">
             <div class="row">
-                <div class="social-links wow fadeInDown">
+                <div class="social-links wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
                     <ul class="list-inline text-center">
-                        <li><a href="" target="_blank"><i class="fa fa-facebook rounded-icon"></i></a></li>
-                        <li><a href="" target="_blank"><i class="fa fa-linkedin rounded-icon"></i></a></li>
-                        <li><a href="" target="_blank"><i class="fa fa-google-plus rounded-icon"></i></a></li>
+                        <li><a href="https://facebook.com/puneeth.nie.s" target="_blank"><i class="fa fa-facebook rounded-icon"></i></a></li>
+                        <li><a href="https://github.com/Puneeth1990" target="_blank"><i class="fa fa-github rounded-icon"></i></a></li>
+                   		<li><a href="https://twitter.com/PuneethSrikanta" target="_blank"><i class="fa fa-twitter rounded-icon"></i></a></li>
+                        <li><a href="https://plus.google.com/u/0/109466219728816928248" target="_blank"><i class="fa fa-google-plus rounded-icon"></i></a></li>
                     </ul>
                 </div>
 
