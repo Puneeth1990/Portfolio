@@ -21,7 +21,7 @@ public class EmailNotificationService {
 			Session session = Session.getDefaultInstance(props,	new javax.mail.Authenticator() {
 					protected PasswordAuthentication getPasswordAuthentication() {
 						String login = "puneethsrikanta@gmail.com";
-						String password = "9449622295";
+						String password = "";
 						return new PasswordAuthentication(login,password);
 					}
 				});
