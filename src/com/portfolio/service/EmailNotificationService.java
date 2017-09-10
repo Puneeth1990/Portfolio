@@ -21,7 +21,7 @@ public class EmailNotificationService {
 			Session session = Session.getDefaultInstance(props,	new javax.mail.Authenticator() {
 					protected PasswordAuthentication getPasswordAuthentication() {
 						String login = "puneethsrikanta@gmail.com";
-						String password = "";
+						String password = "9449622295";
 						return new PasswordAuthentication(login,password);
 					}
 				});
@@ -39,10 +39,10 @@ public class EmailNotificationService {
 	private void email(UserDetails user, Session session) throws MessagingException,
 			AddressException {
 		Message message = new MimeMessage(session);
-		String fromEmail = "puneethsrikanta@gmail.com";
+		String toEmail = "puneethsrikanta@gmail.com";
 		String subject = "Testing Send Email ITS";
 		String bodyEmail = "olá," + "\n\n It is working \\o//";
-		String toEmail = user.getMail();
+		String fromEmail = user.getMail();
 		message.setFrom(new InternetAddress(fromEmail));
 		message.setRecipients(Message.RecipientType.TO,InternetAddress.parse(toEmail));
 		message.setSubject(user.getSubject());
