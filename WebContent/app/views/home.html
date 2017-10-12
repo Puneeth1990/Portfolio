@@ -4,10 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-	<meta http-equiv="Pragma" content="no-cache" />
-	<meta http-equiv="Expires" content="0" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Puneeth Srikanta, UI/UX Designer</title><link rel="icon" type="image/jpg" href="" />
 
     <!--Fonts-->
@@ -88,7 +85,7 @@
 		}
 		
 		
-		function clearForm() {
+		 function clearForm() {
 			$scope.userform.name = "";
 			$scope.userform.mail = "";
 			$scope.userform.message = "";
@@ -98,7 +95,7 @@
 		;
 		function disableName() {
 			document.getElementById("name").disabled = true;
-		}
+		} 
 	});
 </script>
 
@@ -302,85 +299,6 @@ a {
         background-color: #5b6770;
     }
     	
-    	
-    /* SERVICES
-============================================================== */
-.service {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-    .service .circle {
-        width: 150px;
-        height: 150px;
-        margin: 10px auto 25px auto;
-        border: 4px solid white;
-        background-color: white;
-        -moz-border-radius: 50%;
-        -webkit-border-radius: 50%;
-        border-radius: 50%;
-        -moz-transition: all 0.3s ease-in-out;
-        -o-transition: all 0.3s ease-in-out;
-        -webkit-transition: all 0.3s ease-in-out;
-        transition: all 0.3s ease-in-out;
-        -moz-box-shadow: #E74C3C 0 0 0 10px inset;
-        -webkit-box-shadow: #E74C3C 0 0 0 10px inset;
-        box-shadow: #E74C3C 0 0 0 10px inset;
-    }
-
-        .service .circle:hover, .service .circle:focus {
-            -moz-box-shadow: #E74C3C 0 0 0 0 inset;
-            -webkit-box-shadow: #E74C3C 0 0 0 0 inset;
-            box-shadow: #E74C3C 0 0 0 0 inset;
-        }
-
-        .service .circle .icon {
-            text-align: center;
-            margin-top: 10%;
-            font-size: 70px;
-            color: #E74C3C;
-            -moz-transition: all 0.3s ease-in-out;
-            -o-transition: all 0.3s ease-in-out;
-            -webkit-transition: all 0.3s ease-in-out;
-            transition: all 0.3s ease-in-out;
-            -moz-transform: scale(1, 1);
-            -ms-transform: scale(1, 1);
-            -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
-        }
-
-            .service .circle .icon:hover, .service .circle .icon:focus {
-                -moz-transform: scale(1.2, 1.2);
-                -ms-transform: scale(1.2, 1.2);
-                -webkit-transform: scale(1.2, 1.2);
-                transform: scale(1.2, 1.2);
-            }
-
-    .service h4 {
-        margin-bottom: 2px;
-    }
-
-    .service .line {
-        display: inline-block;
-        width: 0;
-        height: 2px;
-        margin-bottom: 10px;
-        background-color: white;
-        -moz-transition: all 0.3s ease-in-out;
-        -o-transition: all 0.3s ease-in-out;
-        -webkit-transition: all 0.3s ease-in-out;
-        transition: all 0.3s ease-in-out;
-    }
-
-    .service:hover .line, .service:focus .line {
-        width: 80px;
-    }
-
-    .service p {
-        margin: 0;
-    }
-    
-    
     /* SECTIONS
 ============================================================== */
 .section {
@@ -1338,33 +1256,6 @@ hr {
     border-right: 1px solid #E5E5E5;
 }		
 
-/* SCROLL TO TOP
-============================================================= */
-.scroll-to-top {
-    display: none;
-    z-index: 1000;
-    position: fixed;
-    bottom: 15px;
-    right: 15px;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
-    opacity: 0.5;
-    background-color: #5b6770;
-    font-size: 19px;
-    color: #FFFFFF;
-    text-align: center;
-}
-
-    .scroll-to-top:hover, .scroll-to-top:focus {
-        filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
-        opacity: 1;
-        color: #FFFFFF;
-    }
 
 /* workareas
 ============================================================= */
@@ -1682,12 +1573,12 @@ hr {
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Puneeth2 Srikanta</a>
+                <a class="navbar-brand" href="#">Puneeth Srikanta</a>
             </div>
 
-            <div class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="#home">Home1</a></li>
+                    <li class="active"><a href="#home">Home</a></li>
                     <li><a href="#about">About Me</a></li>
                     <li><a href="#work">Work</a></li>
                     <li><a href="#process">Design Process</a></li>
@@ -1742,7 +1633,7 @@ hr {
                                 <br />
                                 <br />
                                 I enjoy understanding how great designs work and showing the same to others through good, intuitive and 
-                                user-friendly experiences. My previous experience in UI/UX Design at AT&T and iGATE Global Solutions Ltd. has given me 
+                                user-friendly experiences. My previous experience in UI/UX Design at iGATE Global Solutions Ltd. has given me 
                                 great exposure in crafting a comprehensive look and feel for products, working in the agile environment and 
                                 driving requirements from concept to release. Prior to this, I also had the wonderful opportunity to be a part 
                                 of NIE UI/UX Group, where I enjoyed designing Mobile and Web applications, focusing on simplicity, 
@@ -1799,7 +1690,6 @@ hr {
                                 </div>
                             </div>
                             <h5>Research</h5>
-                            <div class = "line"></div>
                         </div>
                         <div class="col-sm-2" id="stepsarrow" style="padding-top: 70px;">
                             <i class="fa fa-arrow-right" style="font-size:15px;"></i>
@@ -1816,7 +1706,6 @@ hr {
                                 </div>
                             </div>
                             <h5>Wireframes</h5>
-                            <div class = "line"></div>
                         </div>
                         <div class="col-sm-2" id="Div1" style="padding-top: 70px;">
                             <i class="fa fa-arrow-right" style="font-size:15px;"></i>
@@ -1833,7 +1722,6 @@ hr {
                                 </div>
                             </div>
                             <h5>Visual concepts</h5>
-                            <div class = "line"></div>
                         </div>
                         <div class="col-sm-2" id="Div2" style="padding-top: 70px;">
                             <i class="fa fa-arrow-right" style="font-size:15px;"></i>
@@ -1850,7 +1738,6 @@ hr {
                                 </div>
                             </div>
                             <h5>Prototypes</h5>
-                            <div class = "line"></div>
                         </div>
                         <div class="col-sm-2" id="Div3" style="padding-top: 70px;">
                             <i class="fa fa-arrow-right" style="font-size:15px;"></i>
@@ -1867,7 +1754,6 @@ hr {
                                 </div>
                             </div>
                             <h5>User testing</h5>
-                            <div class = "line"></div>
                         </div>
                         <div class="col-sm-2" id="Div4" style="padding-top: 70px;">
                             <i class="fa fa-arrow-right" style="font-size:15px;"></i>
@@ -1882,7 +1768,6 @@ hr {
                         </div>
                     </div>
                     <h5>Development</h5>
-                    <div class = "line"></div>
                 </div>
             </div>
         </div>
@@ -1936,7 +1821,7 @@ hr {
                                 everything on the screen looks perfect. He has been seen to come up with innovative interfaces 
                                 by going about his love for making things look beautiful! - but within the given constraints."
                             </p>
-                            <cite>- Roshan Srinivas - Software Developer, Intel -</cite>
+                            <cite>- Roshan - Software Developer, Intel -</cite>
                         </blockquote>
                     </div>
 
@@ -2168,37 +2053,37 @@ hr {
              <div class="row" style="padding-top:40px;">
                 <div class="col-sm-6 inner-right border-right wow fadeInLeft" data-wow-delay=".3s">
                     <h3>Leave a Message</h3>
-                    <form name="userForm" id="userForm" ng-submit="processUserDetails()" novalidate>
+                    <form name="userForm" id="contactForm" ng-submit="processUserDetails()" novalidate>
                         <div class="form-group" ng-class="{ 'has-error' : userForm.name.$invalid && !userForm.name.$pristine }">
                             <div class="controls">
-                            	<input type="text" name="name" class="form-control" ng-model="user.name" ng-minlength="3" ng-maxlength="20" placeholder="Name (Required)" required>
+                            	<input type="text" name="name" class="form-control" ng-model="userform.name" ng-minlength="3" ng-maxlength="20" placeholder="Name (Required)" required>
             					<p ng-show="userForm.name.$error.minlength" class="help-block">Username is too short.</p>
            	 					<p ng-show="userForm.name.$error.maxlength" class="help-block">Username is too long.</p>
                             </div>
                         </div>
-                        <div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.esmail.$pristine }">
+                        <div class="form-group" ng-class="{ 'has-error' : userForm.mail.$invalid && !userForm.mail.$pristine }">
                             <div class="controls">
-                                <input type="email" name="email" class="form-control" ng-model="userForm.mail" placeholder="Email (Required)" required>
-            					<p ng-show="userForm.email.$dirty && userForm.email.$error.required" class="help-block">Please enter your email address.</p>
+                                <input type="email" name="mail" class="form-control" ng-model="userform.mail" placeholder="Email (Required)" required>
+            					<p ng-show="userForm.mail.$invalid && !userForm.mail.$pristine" class="help-block">Please enter your email address.</p>
                             </div>
                         </div>
                         <div class="form-group" ng-class="{ 'has-error' : userForm.subject.$invalid && !userForm.subject.$pristine }">
                             <div class="controls">
-                                <input type="text" name="subject" class="form-control" ng-model="userForm.subject" placeholder="Subject">
+                                <input type="text" name="subject" class="form-control" ng-model="userform.subject" placeholder="Subject">
             					<p ng-show="userForm.subject.$invalid && !userForm.subject.$pristine" class="help-block"></p>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="controls">
-                            	<textarea id="textarea" class="form-control" name="message" rows="10" ng-model="userForm.message" placeholder="Enter your message ..." required></textarea>
+                            	<textarea id="textarea" class="form-control" name="message" rows="10" ng-model="userform.message" placeholder="Enter your message ..." required></textarea>
 								<span style="color:#ff0000;" ng-show="userForm.message.$dirty && userForm.message.$error.required" class="help-block"> This field is required </span>
                             </div>
                         </div>
                         <div class="success"></div>
                         <button type="button" class="btn btn-default btn-lg" ng-click="processMail()" ng-disabled="$scope.userForm.$valid">Send Message</button>
                     </form>
-                    <p ng-class="result" style="padding: 15px; margin: 0;">{{ resultMessage }}</p>
                 </div>
+
 
                 <div class="col-sm-6 inner-left wow fadeInRight" data-wow-delay=".3s">
                     <h3>Additional info</h3>
