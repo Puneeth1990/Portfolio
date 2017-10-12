@@ -14,9 +14,13 @@
 
 ### Tools
 
-Eclipse IDE
-HTML 5, CSS 3, Javascript, Angular JS
-And for sending an email used Spring Java Mail API 
+Tool - Eclipse IDE 
+Web Technologies - HTML 5, CSS 3, Javascript, Angular JS
+Back End - Spring Web MVC
 
-![dsc_0058](https://user-images.githubusercontent.com/7831608/31522980-62178e70-af76-11e7-90b7-ea435067c70f.jpg)
+For sending an email from application I have used Spring Java Mail API.
+
+Enthusiastic in learning new technologies, working on another application Twitter Prototype - Where I have been using the latest trending frameworks like EJS, Node JS, Express JS. Would like to migrate into React JS for the front end. 
+
+1. Portfolio - Home screen 
 
